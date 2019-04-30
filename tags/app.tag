@@ -5,8 +5,10 @@
         <h1>Less is More
           <span class="float-right">
             <button hide={ user } onclick={ login } class="btn btn-success">LOGIN</button>
+            <button if={ user } class="btn btn-secondary btn-lg">Ask for Donation</button>
+            <button if={ user } class="btn btn-secondary btn-lg">Donate</button>
             <small if={ user }>{ user.displayName }
-              <button onclick={ logout } class="btn btn-danger">LOGOUT</button>
+              <button onclick={ logout } class="btn btn-outline-dark">LOGOUT</button>
             </small>
           </span>
         </h1>
@@ -38,7 +40,6 @@
 
     logout() {
       firebase.auth().signOut().then(function() {
-        // Sign-out successful.
       })
     }
 
