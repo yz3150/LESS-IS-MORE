@@ -1,38 +1,44 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>Less is More</title>
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
-    <link rel="stylesheet" href="./styles/styles.css">
-  </head>
-  <body>
-    <!-- MOUNT POINT -->
-    <app></app>
 
-    <!-- TAGS -->
-    <script src="./tags/app.tag" type="riot/tag"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/riot/3.13.2/riot+compiler.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/5.10.1/firebase.js"></script>
+<head>
+  <meta charset="utf-8">
+  <title>Less is More</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+  <link rel="stylesheet" href="./styles/styles.css">
+</head>
 
-    <script>
-      // Initialize Firebase
-      var config = {
-        apiKey: "AIzaSyBpgsXC03WuJ1wbwCT1dWtOKhNl5aFiWIU",
-        authDomain: "less-is-more-30192.firebaseapp.com",
-        databaseURL: "https://less-is-more-30192.firebaseio.com",
-        projectId: "less-is-more-30192",
-        storageBucket: "less-is-more-30192.appspot.com",
-        messagingSenderId: "26916945302"
-      };
-      firebase.initializeApp(config);
+<body>
+  <!-- MOUNT POINT -->
+  <app></app>
 
-      let database = firebase.firestore();
-      let observer = riot.observable();
+  <!-- TAGS -->
+  <script src="./tags/app.tag" type="riot/tag"></script>
+  <script src="./tags/homePage.tag" type="riot/tag"></script>
+  <script src="./tags/askForDonation.tag" type="riot/tag"></script>
+  <script src="./tags/item-card.tag" type="riot/tag"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/riot/3.13.2/riot+compiler.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.10.1/firebase.js"></script>
 
-      // INITIALIZE RIOT
-      riot.mount('*');
-    </script>
-  </body>
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyBpgsXC03WuJ1wbwCT1dWtOKhNl5aFiWIU",
+      authDomain: "less-is-more-30192.firebaseapp.com",
+      databaseURL: "https://less-is-more-30192.firebaseio.com",
+      projectId: "less-is-more-30192",
+      storageBucket: "less-is-more-30192.appspot.com",
+      messagingSenderId: "26916945302"
+    };
+    firebase.initializeApp(config);
+
+    let database = firebase.firestore();
+    let observer = riot.observable();
+
+    // INITIALIZE RIOT
+    riot.mount('*');
+  </script>
+</body>
+
 </html>
