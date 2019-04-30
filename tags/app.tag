@@ -6,7 +6,7 @@
           <span class="float-right">
             <button hide={ user } onclick={ login } class="btn btn-success">LOGIN</button>
             <small if={ user }>{ user.displayName }
-              <button onclike={ logout } class="btn btn-danger">LOGOUT</button>
+              <button onclick={ logout } class="btn btn-danger">LOGOUT</button>
             </small>
           </span>
         </h1>
@@ -33,33 +33,24 @@
 
     login() {
       var provider = new firebase.auth.GoogleAuthProvider();
-      console.log("login");
-      firebase.auth().signInWithPopup(provider).then(function(result) {
-        // This gives you a Google Access Token. You can use it to access the Google API.
-        var token = result.credential.accessToken;
-        // The signed-in user info.
-        tag.user = result.user;
-      })}
+	    firebase.auth().signInWithPopup(provider);
+    }
 
     logout() {
       firebase.auth().signOut().then(function() {
         // Sign-out successful.
-      }).catch(function(error) {
-        // An error happened.
-      });
-      console.log("logout");
-      this.user = null;
+      })
     }
 
 
-  //   firebase.auth().onAuthStateChanged(userObj => {
-  //   if (userObj) {
-  //     this.user = userObj;
-  //   } else {
-  //     this.user = null;
-  //   }
-  //   this.update();
-  // });
+    firebase.auth().onAuthStateChanged(userObj => {
+      if (userObj) {
+        this.user = userObj;
+      } else {
+        this.user = null;
+      }
+      this.update();
+    });
 
 
   </script>

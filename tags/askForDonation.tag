@@ -1,1 +1,0 @@
-<askForDonation></askForDonation>
