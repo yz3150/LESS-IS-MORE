@@ -19,9 +19,6 @@
 
   <div class="">
     <homePage></homePage>
-    <donate></donate>
-    <askForDonation></askForDonation>
-    <profile></profile>
   </div>
 
 
@@ -55,6 +52,10 @@
 
 
   </script>
+
+  <style>
+
+  </style>
 
 
 
