@@ -5,8 +5,8 @@
         <h1>Less is More
           <span class="float-right">
             <button hide={ user } onclick={ login } class="btn btn-success">LOGIN</button>
-            <button if={ user } class="btn btn-secondary btn-lg" onclick="askForDonation">Ask for Donation</button>
-            <button if={ user } class="btn btn-secondary btn-lg" onclick="donate">Donate</button>
+            <button if={ user } class="btn btn-secondary btn-lg" onclick={ askForDonation }>Ask for Donation</button>
+            <button if={ user } class="btn btn-secondary btn-lg" onclick={ donate }>Donate</button>
             <small if={ user }>{ user.displayName }
               <button onclick={ logout } class="btn btn-outline-dark">LOGOUT</button>
             </small>
@@ -18,13 +18,23 @@
   </div>
 
   <div class="">
-    <homepage if={ user }></homepage>
-    <askForDonation if={ askForDonation }></askForDonation>
+    <homepage if={ mode === "homePage" }></homepage>
+    <askForDonation if={ mode === "askForDonation" }></askForDonation>
+    <donate if={ mode === "donate"}></donate>
   </div>
 
   <script>
     this.user = null;
+    this.mode = "homePage";
+    console.log(this.mode);
 
+    askForDonation(event) {
+      this.mode = "askForDonation";
+    }
+
+    donate(event) {
+      this.mode = "donate";
+    }
 
     login() {
       var provider = new firebase.auth.GoogleAuthProvider();
