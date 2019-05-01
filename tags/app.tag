@@ -18,15 +18,16 @@
   </div>
 
   <div class="">
-    <homepage if={ mode === "homePage" }></homepage>
+    <homepage if={ user && mode === "homePage" }></homepage>
     <askForDonation if={ mode === "askForDonation" }></askForDonation>
     <donate if={ mode === "donate"}></donate>
   </div>
 
   <script>
+  var tag = this;
     this.user = null;
     this.mode = "homePage";
-    console.log(this.mode);
+
 
     askForDonation(event) {
       this.mode = "askForDonation";
@@ -48,11 +49,16 @@
     firebase.auth().onAuthStateChanged(userObj => {
       if (userObj) {
         this.user = userObj;
+
+
       } else {
         this.user = null;
+
       }
       this.update();
     });
+
+
   </script>
 
   <style></style>

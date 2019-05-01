@@ -6,25 +6,26 @@
 	<form>
 		<div class="row">
 			<div class="col-6">
-				<div>
+				<!-- <div>
 
 					<div class="form-group">
 						<label style="font-size:18px" for="item-image">Upload an image of your item</label>
 						<div class="custom-file">
-							<input type="file" class="custom-file-input" id="item-image" required="required">
-							<label class="custom-file-label" for="item-image">Choose file...</label>
+							<input type="file" ref="media" class="custom-file-input" onchange={ handleFiles }>
+							<label class="custom-file-label" for="item-image">{ fileLabel }</label>
 						</div>
 					</div>
-				</div>
+					<button class="btn btn-secondary" type="submit" onclick={ submit }>Submit</button>
+				</div> -->
 				<div>
 
 					<div class="form-group">
 						<label style="font-size:18px" for="item-name">Name of your item</label><br>
-						<input name="item-name" id="item-name">
+						<input name="item-name" id="item-name" ref="itemName">
 					</div>
-						 <button class="btn btn-secondary" type="submit">Submit</button>
+						 <button class="btn btn-secondary" type="submit" onclick={ submit }>submit</button>
 				</div>
-				<div>
+				<!-- <div>
 					<div>
 						<fieldset class="form-group">
 							<legend style="font-size:18px" for="categoryOptions">Category of your item</legend>
@@ -52,9 +53,9 @@
 							</div>
 						</fieldset>
 					</div>
-				</div>
+				</div> -->
 
-				<div>
+				<!-- <div>
 					<fieldset class="form-group">
 						<legend style="font-size:18px" for="colorOptions">Color</legend>
 						<div class="form-check form-check-inline">
@@ -80,9 +81,9 @@
 							</div>
 						</div>
 					</fieldset>
-				</div>
+				</div> -->
 
-				<div>
+				<!-- <div>
 
 					<fieldset class="form-group">
 						<legend style="font-size:18px" for="sizeOptions">Size</legend>
@@ -116,8 +117,8 @@
 						</div>
 					</fieldset>
 
-				</div>
-				<div>
+				</div> -->
+				<!-- <div>
 
 					<fieldset class="form-group">
 						<legend style="font-size:18px" for="conditionOptions">Condition of your item</legend>
@@ -139,16 +140,87 @@
 						</div>
 					</fieldset>
 
-				</div>
+				</div> -->
 			</div>
-			<div class="col-6">
+			<!-- <div class="col-6">
 				<div class="form-group">
 					<label style="font-size:18px" for="story">Please share a story of the item you'd like to donate.</label>
 					<textarea class="form-control" rows="5" id="story"></textarea>
 				</div>
-			</div>
+			</div> -->
+
 		</div>
 	</form>
 
 </div>
+
+<script>
+var tag = this;
+var itemName = "";
+let itemsRef = database.collection('items');
+let id = itemsRef.doc().id;
+// let storageRef = firebase.storage().ref();
+// let mediaStorageRef = storageRef.child('media');
+//
+// this.file = null;
+// this.fileLabel = "Choose media file";
+//
+// handleFiles(event) {
+// 	let fileInput = event.target;
+// 	let files = fileInput.files; // Array of files data
+// 	let file = files[0];         // One file (first)
+// 	let fileName = file.name;    // e.g. happy-puppy.png
+// 	let fileSize = file.size;    // e.g. 178955 (Bytes)
+// 	let fileType = file.type;    // e.g. image/png
+//
+// 	this.file = file;
+// 	this.fileLabel = fileName;
+//
+// }
+
+submit() {
+
+	// let uniqueName = this.file.name + "-" + Date.now();
+	// let fileRef = mediaStorageRef.child(uniqueName);
+	let itemsRef = database.collection('items');
+	let id = itemsRef.doc().id;
+	let itemName = this.refs.itemName.value;
+
+	if (itemName !== undefined) {
+		console.log('itemName');
+		let itemColRef = database.collection("itemCollection");
+		let id = itemColRef.doc().id;
+
+		itemColRef.doc(id).set({
+			owner: firebase.auth().currentUser.displayName,
+			id: id,
+			name: itemName,
+			timestamp: firebase.firestore.FieldValue.serverTimestamp()
+		})
+		this.refs.itemName.value= "";
+	}
+
+	// fileRef.put(this.file).then(snapshot => {
+	// 	console.log('uploaded file');
+	// 	return snapshot.ref.getDownloadURL();
+	// }).then(downloadURL => {
+	// 	let key = itemsRef.doc().id;
+	//
+	// 	this.item = {
+	// 		owner: firebase.auth().currentUser.displayName,
+	// 		id: id,
+	// 		mediaURL: downloadURL,
+	// 		createdAt: firebase.firestore.FieldValue.serverTimestamp()
+	//
+	// 	};
+	// 	return itemsRef.doc(id).set(this.item);
+	// }).then(() => {
+	// 	console.log('SAVED to DATABASE');
+	// 	this.update();
+	// });
+}
+
+
+
+</script>
 </donate>
