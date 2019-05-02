@@ -5,7 +5,7 @@
     </div>
     <div class="row">
       <div class="col">
-        <item-card each ={ item, i in items } items={ items }></item-card>
+        <item-card each={ item, i in items } items={ items }></item-card>
     </div>
     <div class="row">
       <button type="button" name="button">VIEW MORE</button>
