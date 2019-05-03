@@ -6,14 +6,14 @@
 		<form>
 			<div class="row">
 				<div class="col-6">
-					<div>
 
-						<div class="form-group">
-							<label style="font-size:18px" for="item-image">Upload an image of your item</label>
-							<div class="custom-file"> <input type="file" ref="media" class="custom-file-input" onchange={ handleFiles }>
-								<label class="custom-file-label" for="item-image">{ fileLabel }</label>
-							</div>
+					<div class="form-group">
+						<label style="font-size:18px" for="item-image">Upload an image of your item</label>
+						<div class="custom-file">
+							<input type="file" ref="media" class="custom-file-input" onchange={ handleFiles }>
+							<label class="custom-file-label" for="item-image">{ fileLabel }</label>
 						</div>
+					</div>
 
 					<div class="form-group">
 						<label style="font-size:18px" for="item-name">Name of your item</label><br>
@@ -117,7 +117,8 @@
 		}
 		submit() {
 
-			let uniqueName = this.file.name + "-" + Date.now(); let fileRef = mediaStorageRef.child(uniqueName);
+			let uniqueName = this.file.name + "-" + Date.now();
+			let fileRef = mediaStorageRef.child(uniqueName);
 			let itemsRef = database.collection('items');
 			let id = itemsRef.doc().id;
 			let itemName = this.refs.itemName.value;
@@ -148,13 +149,9 @@
 					this.update();
 				});
 
-
-
 				observable.trigger('modeChange');
 			}
 
-			}
-
-
+		}
 	</script>
 </donate>
