@@ -6,8 +6,14 @@
 		<form>
 			<div class="row">
 				<div class="col-6">
-					<!-- <div> <div class="form-group"> <label style="font-size:18px" for="item-image">Upload an image of your item</label> <div class="custom-file"> <input type="file" ref="media" class="custom-file-input" onchange={ handleFiles }> <label
-					class="custom-file-label" for="item-image">{ fileLabel }</label> </div> </div> <button class="btn btn-secondary" type="submit" onclick={ submit }>Submit</button> </div> -->
+					<div>
+
+						<div class="form-group">
+							<label style="font-size:18px" for="item-image">Upload an image of your item</label>
+							<div class="custom-file"> <input type="file" ref="media" class="custom-file-input" onchange={ handleFiles }>
+								<label class="custom-file-label" for="item-image">{ fileLabel }</label>
+							</div>
+						</div>
 
 					<div class="form-group">
 						<label style="font-size:18px" for="item-name">Name of your item</label><br>
@@ -79,16 +85,21 @@
 	<script>
 		var tag = this;
 		var itemName = "";
-		// let itemsRef = database.collection('items'); let id = itemsRef.doc().id; let storageRef = firebase.storage().ref(); let mediaStorageRef = storageRef.child('media');
-		//
-		// this.file = null; this.fileLabel = "Choose media file";
-		//
-		// handleFiles(event) { 	let fileInput = event.target; 	let files = fileInput.files;  Array of files data 	let file = files[0];          One file (first) 	let fileName = file.name;     e.g. happy-puppy.png 	let fileSize = file.size;     e.g. 178955
-		// (Bytes) 	let fileType = file.type;     e.g. image/png
-		//
-		// 	this.file = file; 	this.fileLabel = fileName;
-		//
-		// }
+		let storageRef = firebase.storage().ref();
+		let mediaStorageRef = storageRef.child('media');
+
+		this.file = null;
+		this.fileLabel = "Choose media file";
+
+		handleFiles(event) {
+			let fileInput = event.target;
+			let files = fileInput.files;
+			let file = files[0];
+			let fileName = file.name;
+			this.file = file;
+			this.fileLabel = fileName;
+		}
+
 		updateSize(event) {
 			itemSize = event.target.value;
 		}
@@ -106,7 +117,7 @@
 		}
 		submit() {
 
-			// let uniqueName = this.file.name + "-" + Date.now(); let fileRef = mediaStorageRef.child(uniqueName);
+			let uniqueName = this.file.name + "-" + Date.now(); let fileRef = mediaStorageRef.child(uniqueName);
 			let itemsRef = database.collection('items');
 			let id = itemsRef.doc().id;
 			let itemName = this.refs.itemName.value;
@@ -117,28 +128,33 @@
 				let itemColRef = database.collection("itemCollection");
 				let id = itemColRef.doc().id;
 
-				itemColRef.doc(id).set({
-					owner: firebase.auth().currentUser.displayName,
-					id: id,
-					name: itemName,
-					size: itemSize,
-					color: itemColor,
-					category: itemCategory,
-					condition: itemCondition,
-					story: itemStory,
+				fileRef.put(this.file).then(snapshot => {
+					console.log('uploaded file');
+					return snapshot.ref.getDownloadURL();
+				}).then(downloadURL => {
+					itemColRef.doc(id).set({
+						owner: firebase.auth().currentUser.displayName,
+						id: id,
+						name: itemName,
+						size: itemSize,
+						color: itemColor,
+						category: itemCategory,
+						condition: itemCondition,
+						story: itemStory,
+						mediaURL: downloadURL,
+						timestamp: firebase.firestore.FieldValue.serverTimestamp()
+					});
 
-					timestamp: firebase.firestore.FieldValue.serverTimestamp()
+					this.update();
 				});
 
+
+
 				observable.trigger('modeChange');
+			}
 
 			}
 
-			// fileRef.put(this.file).then(snapshot => { 	console.log('uploaded file'); 	return snapshot.ref.getDownloadURL(); }).then(downloadURL => { 	let key = itemsRef.doc().id;
-			//
-			// 	this.item = { 		owner: firebase.auth().currentUser.displayName, 		id: id, 		mediaURL: downloadURL, 		createdAt: firebase.firestore.FieldValue.serverTimestamp()
-			//
-			// 	}; 	return itemsRef.doc(id).set(this.item); }).then(() => { 	console.log('SAVED to DATABASE'); 	this.update(); });
-		}
+
 	</script>
 </donate>

@@ -7,7 +7,7 @@
     <div class="card-body">
       <p>name { item.name }</p>
       <!-- <p>purpose{ item.purpose }</p> -->
-      <!-- <img src={ item.mediaURL }> -->
+      <img src="{ item.mediaURL }" alt="item_img" width="50%">
 
       <span>{ item.category } | { item.size } | { item.color } | { item.condition }</span>
       <p>Story: { item.story }</p>
