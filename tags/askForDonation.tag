@@ -1,4 +1,2 @@
 <askForDonation>
-hi
-
 </askForDonation>

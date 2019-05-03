@@ -12,9 +12,9 @@
 
 						<div class="form-group">
 							<label style="font-size:18px" for="item-name">Name of your item</label><br>
-							<input name="item-name" id="item-name" ref="itemName">
+							<input name="item-name" ref="itemName">
 						</div>
-						<button class="btn btn-secondary" type="submit" onclick={ submit }>submit</button>
+						<button class="btn btn-secondary" type="button" onclick={ submit }>submit</button>
 					</div>
 					<!-- <div> <div> <fieldset class="form-group"> <legend style="font-size:18px" for="categoryOptions">Category of your item</legend> <div class="form-check form-check-inline"> <div class="form-check form-check-inline"> <input type="radio"
 					class="form-check-input" name="categoryOptions" id="pants"> <label class="form-check-label" for="pants">Pants</label> </div> <div class="form-check form-check-inline"> <input type="radio" class="form-check-input" name="categoryOptions" id="shirt">
@@ -49,8 +49,8 @@
 	<script>
 		var tag = this;
 		var itemName = "";
-		let itemsRef = database.collection('items');
-		let id = itemsRef.doc().id;
+		// let itemsRef = database.collection('items');
+		// let id = itemsRef.doc().id;
 		// let storageRef = firebase.storage().ref(); let mediaStorageRef = storageRef.child('media');
 		//
 		// this.file = null; this.fileLabel = "Choose media file";
@@ -74,8 +74,19 @@
 				let itemColRef = database.collection("itemCollection");
 				let id = itemColRef.doc().id;
 
-				itemColRef.doc(id).set({owner: firebase.auth().currentUser.displayName, id: id, name: itemName, timestamp: firebase.firestore.FieldValue.serverTimestamp()})
+				itemColRef.doc(id).set({
+					owner: firebase.auth().currentUser.displayName,
+					id: id,
+					name: itemName,
+					timestamp: firebase.firestore.FieldValue.serverTimestamp()
+				});
+
+				observable.trigger('modeChange');
+
+
+
 			}
+
 
 			// fileRef.put(this.file).then(snapshot => { 	console.log('uploaded file'); 	return snapshot.ref.getDownloadURL(); }).then(downloadURL => { 	let key = itemsRef.doc().id;
 			//

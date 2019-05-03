@@ -18,7 +18,7 @@
   </div>
 
   <div class="">
-    <homepage if={ user && mode === "homePage" }></homepage>
+    <homepage if={ user && mode === "homepage" }></homepage>
     <askfordonation if={ mode === "askForDonation" }></askfordonation>
     <donate if={ mode === "donate"}></donate>
   </div>
@@ -26,7 +26,7 @@
   <script>
     var tag = this;
     this.user = null;
-    this.mode = "homePage";
+    this.mode = "homepage";
 
     askForDonation(event) {
       this.mode = "askForDonation";
@@ -54,6 +54,11 @@
 
       }
       this.update();
+    });
+
+    observable.on('modeChange', function(){
+      tag.mode = "homepage";
+      tag.update();
     });
   </script>
 

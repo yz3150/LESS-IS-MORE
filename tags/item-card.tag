@@ -21,10 +21,11 @@
 
   <script>
     var tag = this;
+    console.log(this.item.name);
     var itemColRef = database.collection('itemCollection');
 
     delete() {
-      database.collection("itemCollection").doc(this.item.id).delete();
+      itemColRef.doc(this.item.id).delete();
       console.log("delete");
     }
   </script>
