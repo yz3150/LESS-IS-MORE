@@ -9,7 +9,8 @@
       <!-- <p>purpose{ item.purpose }</p> -->
       <!-- <img src={ item.mediaURL }> -->
 
-      <!-- <span>Catogory{ item.category }</span> <span>Size { item.size }</span> <span>Color{ item.color }</span> <span>Condition{ item.condition }</span> <p>Story{ item.story }</p> -->
+      <span>{ item.category } | { item.size } | { item.color } | { item.condition }</span>
+      <p>Story: { item.story }</p>
     </div>
     <div class="card-footer">
       <button type="button" name="button">LEARN MORE</button>
