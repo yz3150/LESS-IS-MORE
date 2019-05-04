@@ -6,7 +6,7 @@
           <span class="float-right">
 
             <div class="dropdown">
-     <button class="btn btn-secondary dropdown-toggle btn-sm" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+     <button class="btn btn-secondary dropdown-toggle btn-lg" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
       Dropdown
      </button>
      <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
@@ -17,8 +17,8 @@
     </div>
 
             <button hide={ user } onclick={ login } class="btn btn-success">LOGIN</button>
-            <button if={ user } class="btn btn-secondary btn-sm" onclick={ askForDonation }>Ask for Donation</button>
-            <button if={ user } class="btn btn-secondary btn-sm" onclick={ donate }>Donate</button>
+            <button if={ user } class="btn btn-secondary btn-lg" onclick={ askForDonation }>Ask for Donation</button>
+            <button if={ user } class="btn btn-secondary btn-lg" onclick={ donate }>Donate</button>
             <small if={ user }>{ user.displayName }
               <button onclick={ logout } class="btn-sm btn-outline-dark">LOGOUT</button>
               <button onclick={ toHomepage } class="btn-sm btn-outline-dark">Homepage</button>
