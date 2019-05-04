@@ -4,11 +4,17 @@
       <h2>NEWEST POSTS</h2>
     </div>
     <div class="row">
-      <div class="col">
+      <div class="col-6">
         <item-card each={ item, i in items } items={ items }></item-card>
       </div>
+      <div class="col-6">
+        <item-card each={ item, i in items } items={ items }></item-card>
+      </div>
+    </div>
       <div class="row">
-        <button type="button" name="button">VIEW MORE</button>
+        <div class="">
+          <button type="button" name="button">VIEW MORE</button>
+        </div>
       </div>
     </div>
 
