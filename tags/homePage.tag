@@ -1,12 +1,10 @@
 <homepage>
-  <div class="container">
+  <div class="container justify-content-center">
     <div class="row">
       <h2>NEWEST POSTS</h2>
     </div>
     <div class="row">
-
-        <item-card  class="col-6" each={ item, i in items } items={ items }></item-card>
-    
+        <item-card  class="col-3" each={ item, i in items } items={ items }></item-card>
     </div>
       <div class="row">
         <div class="">
@@ -14,7 +12,7 @@
         </div>
       </div>
     </div>
-
+</div>
     <script>
       var tag = this;
       var itemColRef = database.collection("itemCollection");
