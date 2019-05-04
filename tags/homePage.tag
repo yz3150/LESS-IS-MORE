@@ -4,12 +4,9 @@
       <h2>NEWEST POSTS</h2>
     </div>
     <div class="row">
-      <div class="col-6">
-        <item-card each={ item, i in items } items={ items }></item-card>
-      </div>
-      <div class="col-6">
-        <item-card each={ item, i in items } items={ items }></item-card>
-      </div>
+
+        <item-card  class="col-6" each={ item, i in items } items={ items }></item-card>
+    
     </div>
       <div class="row">
         <div class="">
