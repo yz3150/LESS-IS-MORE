@@ -86,6 +86,12 @@
 
   shadow: 5px;
 }
+
+small {
+font-size: 20px;
+}
+
+
   </style>
 
 
