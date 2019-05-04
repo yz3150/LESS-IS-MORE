@@ -143,6 +143,7 @@
 						condition: itemCondition,
 						story: itemStory,
 						mediaURL: downloadURL,
+						purpose: "wants to donate",
 						timestamp: firebase.firestore.FieldValue.serverTimestamp()
 					});
 

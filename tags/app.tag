@@ -9,6 +9,7 @@
             <button if={ user } class="btn btn-secondary btn-lg" onclick={ donate }>Donate</button>
             <small if={ user }>{ user.displayName }
               <button onclick={ logout } class="btn btn-outline-dark">LOGOUT</button>
+              <button onclick={ toHomepage } class="btn btn-outline-light">Homepage</button>
             </small>
           </span>
         </h1>
@@ -27,6 +28,10 @@
     var tag = this;
     this.user = null;
     this.mode = "homepage";
+
+    toHomepage() {
+      observable.trigger('modeChange');
+    }
 
     askForDonation(event) {
       this.mode = "askForDonation";
