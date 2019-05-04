@@ -94,7 +94,7 @@
 
 }
 
-.hr {
+hr {
 
   shadow: 5px;
 }

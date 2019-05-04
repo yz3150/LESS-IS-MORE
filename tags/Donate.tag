@@ -1,9 +1,12 @@
 <donate>
+
 	<div class="container justify-content-center">
 		<div class="row col-12">
-			<h3>Add description to my donation</h3>
+			<h3 class="adddes">Add description to my donation</h3>
 		</div>
 		<form>
+			<div class="card bg-light">
+				 <div class="card-body">
 			<div class="row">
 				<div class="col-6">
 
@@ -78,6 +81,8 @@
 					</div>
 				</div>
 			</div>
+		</div>
+	</div>
 		</form>
 
 	</div>
@@ -155,4 +160,16 @@
 
 		}
 	</script>
+
+	<style>
+
+	.adddes{
+padding-bottom: 10px;
+padding-top: 20px;
+
+	}
+	</style>
+
+
+
 </donate>
