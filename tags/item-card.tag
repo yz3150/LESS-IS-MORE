@@ -4,6 +4,8 @@
       <!-- <img src={ user.profileUrl } alt="profilePic" class="userProfile"> <span class="userName">{ item.userName }</span> -->
     </div>
 
+
+
     <div class="card-body">
       <p>name { item.name }</p>
       <p>{ item.purpose }</p>
@@ -12,6 +14,7 @@
       <span>{ item.category } | { item.size } | { item.color } | { item.condition }</span>
       <p>Story: { item.story }</p>
     </div>
+
     <div class="card-footer">
       <button type="button" name="button">LEARN MORE</button>
       <div>
