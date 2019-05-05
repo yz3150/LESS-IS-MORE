@@ -2,7 +2,7 @@
   <div class="container">
     <div class="row">
       <div class="col">
-        <h1 class="headline">Less is More
+        <h1 class="headline"><img src="../assets/logo.png" alt="login_img" width="23%">
           <span class="float-right">
             <div class="row">
               <div class="">
@@ -38,6 +38,7 @@
       <homepage if={ user && mode==="homepage" }></homepage>
       <askfordonation if={ mode==="askForDonation" }></askfordonation>
       <donate if={ mode==="donate" }></donate>
+      <myProfile if={ mode ==="myProfile" }></myProfile>
     </div>
 
     <footer>
