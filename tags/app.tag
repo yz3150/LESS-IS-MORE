@@ -39,7 +39,7 @@
 
   <footer>
     <hr>
-    <p style="text-align: center">Made by Yanting, Yuke & Zoe <br>with love &hearts;</p>
+    <p>Made by Yanting, Yuke & Zoe <br>with love &hearts;</p>
   </footer>
 
   <script>
@@ -106,10 +106,14 @@
       font-size: 20px;
     }
 
-    hr {
-      margin-top: 40px;
-    }
+    footer {
+      position: relative;
 
+  bottom: 0;
+  width: 100%;
+      margin-top: 40px;
+      text-align: center;
+    }
 
   </style>
 
