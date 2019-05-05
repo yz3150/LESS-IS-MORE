@@ -49,7 +49,7 @@
           </div>
 
           <div class="form-group" ref="color" onclick={ updateColor }>
-            <p>Choose COLORS:</p>
+            <p>Choose COLOR:</p>
             <div class="form-check form-check-inline">
               <input id="colorBlack" class="form-check-input" type="checkbox" value="black" checked="checked">
               <label class="form-check-label" for="colorBlack">Black</label>
@@ -84,8 +84,18 @@
             </div>
           </div>
 
+
+
+
+
+        </div>
+        <div class="col-6">
+
+
+
+
           <div class="form-group" ref="size" onclick={ updateSize }>
-            <p>Choose SIZES:</p>
+            <p>Choose SIZE:</p>
             <div class="form-check form-check-inline">
               <input id="sizeXXS" class="form-check-input" type="checkbox" value="xxs" checked="checked">
               <label class="form-check-label" for="sizeXXS">XXS</label>
@@ -116,8 +126,12 @@
             </div>
           </div>
 
+
+
+
+
           <div class="form-group" ref="condition" onclick={ updateCondition }>
-            <p>Choose CONTIONS:</p>
+            <p>Choose CONDITION:</p>
             <div class="form-check form-check-inline">
               <input id="conditionNew" class="form-check-input" type="checkbox" value="new" checked="checked">
               <label class="form-check-label" for="conditionNew">New</label>
@@ -137,16 +151,16 @@
           </div>
 
 
-        </div>
-        <div class="col-6">
-          <div class="form-group">
+
+          <div class="form-group textarea">
             <label style="font-size:18px" for="story">Share a short story about why you need the item and how the item can help you.</label>
-            <textarea class="form-control" rows="5" ref="itemWantedStory"></textarea>
+            <textarea class="form-control" rows="6" ref="itemWantedStory"></textarea>
           </div>
         </div>
       </div>
     </div>
   </div>
+
     </form>
 
     <button class="btn btn-secondary" type="button">+ Add more items</button>
@@ -218,7 +232,11 @@ padding-top: 20px;
   .form{
 
 padding-bottom: 20px;
+  }
 
+  .textarea{
+
+  padding-top: 35px;
   }
 
 
