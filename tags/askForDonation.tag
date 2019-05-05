@@ -263,7 +263,7 @@ padding-bottom: 20px;
 
   .card{
 
-    background-color: #c3b8a7;
+    background-color: #E1E6E0;
   }
 
 	</style>
