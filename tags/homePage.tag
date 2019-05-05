@@ -1,16 +1,11 @@
 <homepage>
   <div class="container justify-content-center">
     <div class="row col-12">
-      <h3>Newest Posts</h3>
+      <h2>Newest Posts</h2>
     </div>
     <div class="row">
-      <div class="col">
-        <item-card each={ item, i in items } items={ items }></item-card>
-        <itemwanted-card each={ itemWanted, i in itemsWanted } itemswanted={ itemsWanted }></itemwanted-card>
-      </div>
-    </div>
-    <div class="row">
-      <button type="button" name="button">VIEW MORE</button>
+        <item-card class="col-4" each={ item, i in items } items={ items }></item-card>
+        <itemwanted-card class="col-4" each={ itemWanted, i in itemsWanted } itemswanted={ itemsWanted }></itemwanted-card>
     </div>
   </div>
 
@@ -38,4 +33,16 @@
       tag.update();
     })
   </script>
+
+  <style>
+    item-card{
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+
+    h3{
+      margin-top: 20px;
+    }
+  </style>
+
 </homepage>
