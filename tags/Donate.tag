@@ -11,7 +11,7 @@
 				<div class="col-6">
 
 					<div class="form-group">
-						<label style="font-size:18px" for="item-image">Upload an image of your item</label>
+						<label style="font-size:16px" for="item-image"><strong>Upload an image of your item</strong></label>
 						<div class="custom-file">
 							<input type="file" ref="media" class="custom-file-input" onchange={ handleFiles }>
 							<label class="custom-file-label" for="item-image">{ fileLabel }</label>
@@ -19,7 +19,7 @@
 					</div>
 
 					<div class="form-group">
-						<label style="font-size:18px" for="item-name">Name of your item</label><br>
+						<label style="font-size:16px" for="item-name"><strong>Name of your item</strong></label><br>
 						<input name="item-name" ref="itemName">
 					</div>
 
@@ -81,7 +81,7 @@
 
 
 					<div class="form-group">
-						<label style="font-size:18px" for="story">Please share a story of the item you'd like to donate.</label>
+						<label style="font-size:16px" for="story"><strong>Please share a story of the item you'd like to donate.</strong></label>
 						<textarea class="form-control" rows="5" ref="itemStory"></textarea>
 					</div>
 				</div>
