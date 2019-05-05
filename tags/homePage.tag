@@ -11,7 +11,7 @@
 
 
   <script>
-    var tag = this;
+var tag = this;
     var itemColRef = database.collection("itemCollection");
 
     itemColRef.orderBy('timestamp', 'desc').onSnapshot(function (snapshot) {

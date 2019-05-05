@@ -159,7 +159,7 @@
 					this.update();
 				});
 
-				observable.trigger('modeChange');
+observable.trigger('modeChange');
 			}
 
 		}
