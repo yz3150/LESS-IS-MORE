@@ -39,9 +39,9 @@
 
     <div class="">
       <homepage if={ user && mode==="homepage" }></homepage>
-      <askfordonation if={ mode==="askForDonation" }></askfordonation>
-      <donate if={ mode==="donate" }></donate>
-      <myprofile if={ mode ==="myProfile" }></myprofile>
+      <askfordonation if={ user && mode==="askForDonation" }></askfordonation>
+      <donate if={ user && mode==="donate" }></donate>
+      <myprofile if={ user && mode ==="myProfile" }></myprofile>
     </div>
 
     <footer>

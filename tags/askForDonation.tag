@@ -49,7 +49,7 @@
                   <strong>Gender:</strong>
                 </p>
                 <div class="form-check form-check-inline">
-                  <input id="genderMale" class="form-check-input" type="checkbox" value="male" checked="checked">
+                  <input id="genderMale" class="form-check-input" type="checkbox" value="male">
                   <label class="form-check-label" for="genderMale">Male</label>
                 </div>
                 <div class="form-check form-check-inline">
@@ -68,7 +68,7 @@
                   <strong>Color:</strong>
                 </p>
                 <div class="form-check form-check-inline">
-                  <input id="colorBlack" class="form-check-input" type="checkbox" value="black" checked="checked">
+                  <input id="colorBlack" class="form-check-input" type="checkbox" value="black">
                   <label class="form-check-label" for="colorBlack">Black</label>
                 </div>
                 <div class="form-check form-check-inline">
@@ -109,7 +109,7 @@
                   <strong>Size:</strong>
                 </p>
                 <div class="form-check form-check-inline">
-                  <input id="sizeXXS" class="form-check-input" type="checkbox" value="xxs" checked="checked">
+                  <input id="sizeXXS" class="form-check-input" type="checkbox" value="xxs">
                   <label class="form-check-label" for="sizeXXS">XXS</label>
                 </div>
                 <div class="form-check form-check-inline">
@@ -143,7 +143,7 @@
                   <strong>Condition:</strong>
                 </p>
                 <div class="form-check form-check-inline">
-                  <input id="conditionNew" class="form-check-input" type="checkbox" value="new" checked="checked">
+                  <input id="conditionNew" class="form-check-input" type="checkbox" value="new">
                   <label class="form-check-label" for="conditionNew">New</label>
                 </div>
                 <div class="form-check form-check-inline">
