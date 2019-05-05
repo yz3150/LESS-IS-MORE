@@ -1,7 +1,7 @@
 <homepage>
   <div class="container justify-content-center">
     <div class="row col-12">
-      <h2>Newest Posts</h2>
+      <h3>Newest Posts</h3>
     </div>
     <div class="row">
         <item-card class="col-4" each={ item, i in items } items={ items }></item-card>
@@ -36,6 +36,11 @@
 
   <style>
     item-card{
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+
+    itemWanted-card{
       margin-top: 10px;
       margin-bottom: 10px;
     }
