@@ -4,17 +4,19 @@
       <img src={ user.profileUrl } alt="profilePic" class="userProfile"> <span class="userName">{ item.userName }</span>
     </div> -->
 
-    <div class="card-body">
-      <p style="text-align:center"><strong>{ itemWanted.user }</strong> { itemWanted.purpose }</p>
-      <img src={ itemWanted.image } alt="itemWanted_img" width="100%">
-      <div class="itemWanted-properties">
-        <span>{ itemWanted.category } | { itemWanted.size } | { itemWanted.color } | { itemWanted.condition }</span>
-      </div>
-      <hr>
-      <div class="story-properties">
-        <p>Story: { itemWanted.story }</p>
-      </div>
-    </div>
+<div class="card-body">
+  <p style="text-align:center">
+    <strong>{ itemWanted.user }</strong>
+    { itemWanted.purpose }</p>
+  <img src={ itemWanted.image } alt="itemWanted_img" width="100%">
+  <div class="itemWanted-properties">
+    <span>{ itemWanted.category } | { itemWanted.size } | { itemWanted.color } | { itemWanted.condition }</span>
+  </div>
+  <hr>
+  <div class="story-properties">
+    <p>Story: { itemWanted.story }</p>
+  </div>
+</div>
     <div class="card-footer">
       <div class="row">
         <div class="col-8">

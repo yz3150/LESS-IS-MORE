@@ -4,6 +4,7 @@
       <div class="col">
         <h1 class="headline">
           <a href="#"><img src="../assets/logo.png" alt="login_img" width="23%" onclick={ toHomepage }></a>
+
           <span class="float-right">
             <div class="row">
               <div class="">
@@ -25,9 +26,10 @@
                   <button class="dropdown-item" type="button">Track my gift</button>
                   <button class="dropdown-item" type="button">Track my frequency</button>
                   <button onclick={ logout } class="dropdown-item" type="button">LOGOUT</button>
-                <!-- </div>
-                <button onclick={ toHomepage } class="btn btn-outline-dark">Homepage</button>
-              </div> -->
+                </div>
+
+              </div>
+            </div>
           </span>
         </h1>
         <hr class="hr">
@@ -39,12 +41,13 @@
       <homepage if={ user && mode==="homepage" }></homepage>
       <askfordonation if={ mode==="askForDonation" }></askfordonation>
       <donate if={ mode==="donate" }></donate>
-      <myProfile if={ mode ==="myProfile" }></myProfile>
+      <myprofile if={ mode ==="myProfile" }></myprofile>
     </div>
 
     <footer>
       <hr>
-      <p>Made by Yanting, Yuke & Zoe <br>with love &hearts;</p>
+      <p>Made by Yanting, Yuke & Zoe
+        <br>with love &hearts;</p>
     </footer>
 
   </div>
@@ -90,7 +93,7 @@
       this.update();
     });
 
-    observable.on('modeChange', function() {
+    observable.on('modeChange', function () {
       tag.mode = "homepage";
       tag.update();
     });
@@ -127,10 +130,5 @@
       margin: 5px;
     }
   </style>
-
-
-
-
-
 
 </app>
