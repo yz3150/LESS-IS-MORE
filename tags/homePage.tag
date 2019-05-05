@@ -9,6 +9,7 @@
     </div>
   </div>
 
+
   <script>
     var tag = this;
     var itemColRef = database.collection("itemCollection");
@@ -48,6 +49,8 @@
     h3{
       margin-top: 20px;
     }
+
+
   </style>
 
 </homepage>
