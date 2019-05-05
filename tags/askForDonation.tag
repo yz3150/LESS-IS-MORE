@@ -17,7 +17,7 @@
           <div class="form-check form-check-inline">
             <input class="form-check-input" type="radio" name="image" id="wantedItemImgPants" value="wantedItemImgPants">
             <label class="form-check-label" for="wantedItemImg">
-              <img src="../assets/illustration_pants.jpg" alt="illustration_pants" width="50%">
+              <img src="../assets/illustration_pants.jpg" alt="illustration_pants" width="27%">
             </label>
           </div>
 
@@ -157,10 +157,10 @@
           </div>
 
 
-
+          <hr>
           <div class="form-group textarea">
             <label style="font-size:18px" for="story">Share a short story about why you need the item and how the item can help you.</label>
-            <textarea class="form-control" rows="6" ref="itemWantedStory"></textarea>
+            <textarea class="form-control" rows="9" ref="itemWantedStory"></textarea>
           </div>
         </div>
       </div>
@@ -242,7 +242,7 @@ padding-bottom: 20px;
 
   .textarea{
 
-  padding-top: 35px;
+  padding-top: 105px;
   }
 
 
