@@ -2,7 +2,8 @@
   <div class="container">
     <div class="row">
       <div class="col">
-        <h1 class="headline"><img src="../assets/logo.png" alt="login_img" width="23%" onclick={ toHomepage }>
+        <h1 class="headline">
+          <a href="#"><img src="../assets/logo.png" alt="login_img" width="23%" onclick={ toHomepage }></a>
           <span class="float-right">
             <div class="row">
               <div class="">
