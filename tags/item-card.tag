@@ -62,7 +62,10 @@
     background-color: #E1E6E0;
   }
 
-
+  .card{
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
 
 
   </style>

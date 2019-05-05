@@ -5,7 +5,7 @@
     </div> -->
 
     <div class="card-body">
-      <p style="text-align:center">{ itemWanted.purpose }</p>
+      <p><strong>{ itemWanted.purpose }</strong></p>
       <img src={ itemWanted.image } alt="itemWanted_img" width="100%">
       <div class="itemWanted-properties">
         <span>{ itemWanted.category } | { itemWanted.size } | { itemWanted.color } | { itemWanted.condition }</span>
@@ -54,5 +54,12 @@
         top: 17px;
         width: 75%;
       }
+
+      .card-body{
+        background-color: #c3b8a7;
+      }
+
+
+
     </style>
 </itemwanted-card>
