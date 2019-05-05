@@ -9,7 +9,7 @@
       <div class="row">
         <div class="col-6">
           <div class="form-group" ref="image" onclick={ updateImage }>
-            <p>Choose Image</p>
+            <p><strong>Choose image</strong></p>
             <div class="form-check form-check-inline">
               <input class="form-check-input" type="radio" name="image" id="wantedItemImgShirt" value="../assets/illustration_shirt.jpg">
               <label class="form-check-label" for="wantedItemImg">
@@ -25,7 +25,7 @@
           </div>
 
           <div class="form-group">
-            <label style="font-size:18px" for="item-name">Name of your item</label><br>
+            <label style="font-size:16px" for="item-name"><strong>Name of your item</strong></label><br>
             <input name="item-name" ref="itemWantedName">
           </div>
 
@@ -41,7 +41,7 @@
           </div>
 
           <div class="form-group" ref="gender" onclick={ updateGender }>
-            <p>Choose GENDER:</p>
+            <p><strong>Gender:</strong></p>
             <div class="form-check form-check-inline">
               <input id="genderMale" class="form-check-input" type="checkbox" value="male" checked>
               <label class="form-check-label" for="genderMale">Male</label>
@@ -58,7 +58,7 @@
           </div>
 
           <div class="form-group" ref="color" onclick={ updateColor }>
-            <p>Choose COLOR:</p>
+            <p><strong>Color:</strong></p>
             <div class="form-check form-check-inline">
               <input id="colorBlack" class="form-check-input" type="checkbox" value="black" checked>
               <label class="form-check-label" for="colorBlack">Black</label>
@@ -104,7 +104,7 @@
 
 
           <div class="form-group" ref="size" onclick={ updateSize }>
-            <p>Choose SIZE:</p>
+            <p><strong>Size:</strong></p>
             <div class="form-check form-check-inline">
               <input id="sizeXXS" class="form-check-input" type="checkbox" value="xxs" checked>
               <label class="form-check-label" for="sizeXXS">XXS</label>
@@ -140,7 +140,7 @@
 
 
           <div class="form-group" ref="condition" onclick={ updateCondition }>
-            <p>Choose CONDITION:</p>
+            <p><strong>Condition:</strong></p>
             <div class="form-check form-check-inline">
               <input id="conditionNew" class="form-check-input" type="checkbox" value="new" checked>
               <label class="form-check-label" for="conditionNew">New</label>
@@ -162,7 +162,7 @@
 
           <hr>
           <div class="form-group textarea">
-            <label style="font-size:18px" for="story">Share a short story about why you need the item and how the item can help you.</label>
+            <label style="font-size:16px" for="story"><strong>Share a short story about why you need the item and how the item can help you.</strong></label>
             <textarea class="form-control" rows="11" ref="itemWantedStory"></textarea>
           </div>
         </div>
@@ -173,7 +173,7 @@
     </form>
 
     <button class="btn btn-secondary" type="button">+ Add more items</button>
-		<button class="btn btn-secondary" type="button" onclick={ submit }>submit</button>
+		<button class="btn btn-secondary" type="button" onclick={ submit }>Submit</button>
 
     <script>
       var tag = this;
