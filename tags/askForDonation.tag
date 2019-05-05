@@ -4,7 +4,7 @@
       <h3 class="adddess">Add the description of the item I want</h3>
     </div>
     <form class="form">
-      <div class="card bg-light">
+      <div class="card">
 				 <div class="card-body">
       <div class="row">
         <div class="col-6">
@@ -19,7 +19,7 @@
             <div class="form-check form-check-inline">
               <input class="form-check-input" type="radio" name="image" id="wantedItemImgPants" value="../assets/illustration_pants.jpg">
               <label class="form-check-label" for="wantedItemImg">
-                <img src="../assets/illustration_pants.jpg" alt="illustration_pants" width="50%">
+                <img src="../assets/illustration_pants.jpg" alt="illustration_pants" width="27%">
               </label>
             </div>
           </div>
@@ -163,7 +163,7 @@
           <hr>
           <div class="form-group textarea">
             <label style="font-size:18px" for="story">Share a short story about why you need the item and how the item can help you.</label>
-            <textarea class="form-control" rows="9" ref="itemWantedStory"></textarea>
+            <textarea class="form-control" rows="11" ref="itemWantedStory"></textarea>
           </div>
         </div>
       </div>
@@ -261,6 +261,10 @@ padding-bottom: 20px;
   padding-top: 105px;
   }
 
+  .card{
+
+    background-color: #E1E6E0;
+  }
 
 	</style>
 
