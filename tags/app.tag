@@ -19,32 +19,33 @@
                   { user.displayName }
                 </button>
                 <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
-                  <button class="dropdown-item " type="button" onclick= { myProfile }>My Profile</button>
+                  <button class="dropdown-item " type="button" onclick={ myProfile }>My Profile</button>
                   <button class="dropdown-item" type="button">Track my donation</button>
                   <button class="dropdown-item" type="button">Track my gift</button>
                   <button class="dropdown-item" type="button">Track my frequency</button>
                   <button onclick={ logout } class="dropdown-item" type="button">LOGOUT</button>
                 </div>
-              <button onclick={ toHomepage } class="btn btn-outline-dark">Homepage</button>
-            </div>
+                <button onclick={ toHomepage } class="btn btn-outline-dark">Homepage</button>
+              </div>
           </span>
         </h1>
         <hr class="hr">
         <img src="../assets/Log-in.jpg" alt="login_img" hide={ user } width="100%">
       </div>
     </div>
-  </div>
 
-  <div class="">
-    <homepage if={ user && mode==="homepage" }></homepage>
-    <askfordonation if={ mode==="askForDonation" }></askfordonation>
-    <donate if={ mode==="donate" }></donate>
-  </div>
+    <div class="">
+      <homepage if={ user && mode==="homepage" }></homepage>
+      <askfordonation if={ mode==="askForDonation" }></askfordonation>
+      <donate if={ mode==="donate" }></donate>
+    </div>
 
-  <footer>
-    <hr>
-    <p>Made by Yanting, Yuke & Zoe <br>with love &hearts;</p>
-  </footer>
+    <footer>
+      <hr>
+      <p>Made by Yanting, Yuke & Zoe <br>with love &hearts;</p>
+    </footer>
+
+  </div>
 
   <script>
     var tag = this;
@@ -123,7 +124,6 @@
     #button {
       margin: 5px;
     }
-
   </style>
 
 
