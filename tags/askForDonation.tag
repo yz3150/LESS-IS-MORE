@@ -4,7 +4,7 @@
       <h3 class="adddess">Add the description of the item I want</h3>
     </div>
     <form class="form">
-      <div class="card bg-light">
+      <div class="card">
 				 <div class="card-body">
       <div class="row">
         <div class="col-6">
@@ -261,6 +261,10 @@ padding-bottom: 20px;
   padding-top: 105px;
   }
 
+  .card{
+
+    background-color: #E1E6E0;
+  }
 
 	</style>
 

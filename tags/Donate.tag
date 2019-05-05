@@ -5,7 +5,7 @@
 			<h3 class="adddes">Add description to my donation</h3>
 		</div>
 		<form class="form">
-			<div class="card bg-light">
+			<div class="card">
 				 <div class="card-body">
 			<div class="row">
 				<div class="col-6">
@@ -50,7 +50,7 @@
 
 
 
-				
+
 
 
 				</div>
@@ -176,6 +176,12 @@ padding-top: 20px;
 
 		padding-bottom: 20px;
 	}
+
+	.card{
+
+		background-color: #E1E6E0;
+	}
+
 	</style>
 
 
