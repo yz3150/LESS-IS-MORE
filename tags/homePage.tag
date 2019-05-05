@@ -1,7 +1,7 @@
 <homepage>
   <div class="container justify-content-center">
     <div class="row col-12">
-      <h4>NEWEST POSTS</h4>
+      <h3>Newest Posts</h3>
     </div>
     <div class="row">
       <div class="col">
