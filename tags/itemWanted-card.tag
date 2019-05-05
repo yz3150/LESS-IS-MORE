@@ -1,7 +1,7 @@
 <itemwanted-card>
   <div class="card itemlist">
     <div class="card-header bg-light">
-      <img src={ user.profileUrl } alt="profilePic" class="userProfile"> <span class="userName">{ item.userName }</span> 
+      <img src={ user.profileUrl } alt="profilePic" class="userProfile"> <span class="userName">{ item.userName }</span>
     </div>
 
     <div class="card-body">
