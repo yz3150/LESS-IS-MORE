@@ -4,12 +4,18 @@
       <div class="col">
         <h1 class="headline">Less is More
           <span class="float-right">
-
-              <button hide={ user } onclick={ login } class="btn btn-success">LOGIN</button>
-              <button if={ user } class="btn btn-secondary btn-lg" onclick={ askForDonation }>Ask for Donation</button>
-              <button if={ user } class="btn btn-secondary btn-lg" onclick={ donate }>Donate</button>
-              <div class="dropdown" if={ user }>
-                <button class="btn btn-secondary dropdown-toggle btn-lg" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <div class="row">
+              <div class="">
+                <button hide={ user } onclick={ login } class="btn btn-success">LOGIN</button>
+              </div>
+              <div id="button">
+                <button if={ user } class="btn btn-secondary btn-lg" onclick={ askForDonation }>Ask for Donation</button>
+              </div>
+              <div id="button">
+                <button if={ user } class="btn btn-secondary btn-lg" onclick={ donate }>Donate</button>
+              </div>
+              <div id="button" class="dropdown" if={ user }>
+                <button class="btn btn-outline-secondary dropdown-toggle btn-lg" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   { user.displayName }
                 </button>
                 <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
@@ -20,7 +26,7 @@
                   <button onclick={ logout } class="dropdown-item" type="button">LOGOUT</button>
                 </div>
               <button onclick={ toHomepage } class="btn btn-outline-dark">Homepage</button>
-
+            </div>
           </span>
         </h1>
         <hr class="hr">
@@ -106,11 +112,12 @@
 
     footer {
       position: relative;
-
-  bottom: 0;
-  width: 100%;
       margin-top: 40px;
       text-align: center;
+    }
+
+    #button {
+      margin: 5px;
     }
 
   </style>
