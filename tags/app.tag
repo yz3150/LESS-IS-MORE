@@ -19,7 +19,7 @@
                   { user.displayName }
                 </button>
                 <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
-                  <button class="dropdown-item " type="button">Profile</button>
+                  <button class="dropdown-item " type="button" onclick= { myProfile }>My Profile</button>
                   <button class="dropdown-item" type="button">Track my donation</button>
                   <button class="dropdown-item" type="button">Track my gift</button>
                   <button class="dropdown-item" type="button">Track my frequency</button>
@@ -50,6 +50,10 @@
     var tag = this;
     this.user = null;
     this.mode = "homepage";
+
+    myProfile() {
+      this.mode = "myProfile";
+    }
 
     toHomepage() {
       observable.trigger('modeChange');
