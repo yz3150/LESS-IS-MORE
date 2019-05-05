@@ -141,7 +141,7 @@
               <label class="form-check-label" for="conditionUsedAcceptable">Used-acceptable</label>
             </div>
           </div>
-          <button class="btn btn-secondary" type="button" onclick={ submit }>submit</button>
+
 
         </div>
         <div class="col-6">
@@ -154,6 +154,9 @@
     </div>
   </div>
     </form>
+
+    <button class="btn btn-secondary" type="button">+ Add more items</button>
+		<button class="btn btn-secondary" type="button" onclick={ submit }>submit</button>
 
     <script>
       var tag = this;
