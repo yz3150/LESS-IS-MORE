@@ -80,8 +80,11 @@
     </div>
   </div>
     </form>
-      <button class="btn btn-secondary" type="button" onclick={ submit }>submit</button>
+      <button class="btn btn-secondary" type="button">+ Add more items</button>
+      <button class="btn btn-secondary" type="button" onclick={ submit }>Submit</button>
   </div>
+
+
 
 
   <style>
@@ -96,7 +99,6 @@ padding-top: 20px;
 padding-bottom: 20px;
 
   }
-
 
 
 	</style>

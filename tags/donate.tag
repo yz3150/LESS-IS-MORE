@@ -4,7 +4,7 @@
 		<div class="row col-12">
 			<h3 class="adddes">Add description to my donation</h3>
 		</div>
-		<form>
+		<form class="form">
 			<div class="card bg-light">
 				 <div class="card-body">
 			<div class="row">
@@ -71,7 +71,7 @@
 						</select>
 					</div>
 
-					<button class="btn btn-secondary" type="button" onclick={ submit }>submit</button>
+
 
 				</div>
 				<div class="col-6">
@@ -84,7 +84,8 @@
 		</div>
 	</div>
 		</form>
-
+		<button class="btn btn-secondary" type="button">+ Add more items</button>
+		<button class="btn btn-secondary" type="button" onclick={ submit }>submit</button>
 	</div>
 
 	<script>
@@ -166,7 +167,11 @@
 	.adddes{
 padding-bottom: 10px;
 padding-top: 20px;
+	}
 
+	.form{
+
+		padding-bottom: 20px;
 	}
 	</style>
 
