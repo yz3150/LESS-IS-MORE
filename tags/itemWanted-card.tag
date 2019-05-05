@@ -6,6 +6,7 @@
 
     <div class="card-body">
       <p>name { itemWanted.name }</p>
+      <img src={ itemWanted.image } alt="">
       <p>{ itemWanted.purpose }</p>
 
       <span>{ itemWanted.category } | { itemWanted.size } | { itemWanted.color } | { itemWanted.condition }</span>
