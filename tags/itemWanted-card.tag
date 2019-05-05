@@ -5,7 +5,7 @@
     </div> -->
 
     <div class="card-body">
-      <p><strong>{ itemWanted.purpose }</strong></p>
+      <p style="text-align:center"><strong>{ itemWanted.user }</strong> { itemWanted.purpose }</p>
       <img src={ itemWanted.image } alt="itemWanted_img" width="100%">
       <div class="itemWanted-properties">
         <span>{ itemWanted.category } | { itemWanted.size } | { itemWanted.color } | { itemWanted.condition }</span>
