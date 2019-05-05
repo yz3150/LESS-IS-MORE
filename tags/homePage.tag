@@ -1,18 +1,15 @@
 <homepage>
   <div class="container justify-content-center">
     <div class="row">
-      <h2>NEWEST POSTS</h2>
+      <h3>NEWEST POSTS</h3>
     </div>
     <div class="row">
-        <item-card  class="col-3" each={ item, i in items } items={ items }></item-card>
+        <item-card  class="col-4" each={ item, i in items } items={ items }></item-card>
     </div>
-      <div class="row">
-        <div class="">
-          <button type="button" name="button">VIEW MORE</button>
-        </div>
-      </div>
-    </div>
-</div>
+
+
+
+  </div>
     <script>
       var tag = this;
       var itemColRef = database.collection("itemCollection");
@@ -26,4 +23,10 @@
         tag.update();
       })
     </script>
+
+    <style>
+      item-card{
+        margin-top: 20px;
+      }
+    </style>
 </homepage>
