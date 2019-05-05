@@ -9,13 +9,13 @@
           <div class="form-check form-check-inline">
             <input class="form-check-input" type="radio" name="image" id="wantedItemImg" value="wantedItemImg">
             <label class="form-check-label" for="wantedItemImg">
-              <img src="../assets/Log-in.jpg" alt="" width="50%">
+              <img src="../assets/illustration_shirt.jpg" alt="" width="50%">
             </label>
           </div>
 
           <div class="form-group">
             <label style="font-size:18px" for="item-name">Name of your item</label><br>
-            <input name="item-name" ref="itemName">
+            <input name="item-name" ref="itemWantedName">
           </div>
 
           <div class="form-group">
@@ -29,54 +29,172 @@
             </select>
           </div>
 
-          <div class="form-group">
-            <select class="form-control" onchange={ updateColor }>
-              <option value="" selected="selected" disabled="disabled">Color</option>
-              <option value="black">Black</option>
-              <option value="white">White</option>
-              <option value="grey">Grey</option>
-              <option value="red">Red</option>
-              <option value="yellow">Yellow</option>
-              <option value="blue">Blue</option>
-              <option value="green">Green</option>
-              <option value="purple">Purple</option>
-            </select>
+          <div class="form-group" ref="gender" onclick={ updateGender }>
+            <p>Choose GENDER:</p>
+            <div class="form-check form-check-inline">
+              <input id="genderMale" class="form-check-input" type="checkbox" value="male" checked="checked">
+              <label class="form-check-label" for="genderMale">Male</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input id="genderFemale" class="form-check-input" type="checkbox" value="female">
+              <label class="form-check-label" for="genderFemale">Female</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input id="genderNeutral" class="form-check-input" type="checkbox" value="neutral">
+              <label class="form-check-label" for="genderNeutral">Neutral</label>
+            </div>
+
           </div>
 
-          <div class="form-group">
-            <select class="form-control" onchange={ updateSize }>
-              <option value="" selected="selected" disabled="disabled">Size</option>
-              <option value="xxs">XXS</option>
-              <option value="xs">XS</option>
-              <option value="s">S</option>
-              <option value="m">M</option>
-              <option value="l">L</option>
-              <option value="xl">XL</option>
-              <option value="xxl">XXL</option>
-            </select>
+          <div class="form-group" ref="color" onclick={ updateColor }>
+            <p>Choose COLORS:</p>
+            <div class="form-check form-check-inline">
+              <input id="colorBlack" class="form-check-input" type="checkbox" value="black" checked="checked">
+              <label class="form-check-label" for="colorBlack">Black</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input id="colorWhite" class="form-check-input" type="checkbox" value="white">
+              <label class="form-check-label" for="colorWhite">White</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input id="colorGrey" class="form-check-input" type="checkbox" value="grey">
+              <label class="form-check-label" for="colorGrey">Grey</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input id="colorRed" class="form-check-input" type="checkbox" value="red">
+              <label class="form-check-label" for="colorRed">Red</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input id="colorYellow" class="form-check-input" type="checkbox" value="yellow">
+              <label class="form-check-label" for="colorYellow">Yellow</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input id="colorBlue" class="form-check-input" type="checkbox" value="blue">
+              <label class="form-check-label" for="colorBlue">Blue</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input id="colorGreen" class="form-check-input" type="checkbox" value="green">
+              <label class="form-check-label" for="colorGreen">Green</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input id="colorPurple" class="form-check-input" type="checkbox" value="purple">
+              <label class="form-check-label" for="colorPurple">Purple</label>
+            </div>
           </div>
 
-          <div class="form-group">
-            <select class="form-control" onchange={ updateCondition }>
-              <option value="" selected="selected" disabled="disabled">Condition</option>
-              <option value="new">New</option>
-              <option value="used-like-new">Used-like New</option>
-              <option value="used-good">Used-good</option>
-              <option value="used-acceptable">Used-acceptable</option>
-            </select>
+          <div class="form-group" ref="size" onclick={ updateSize }>
+            <p>Choose SIZES:</p>
+            <div class="form-check form-check-inline">
+              <input id="sizeXXS" class="form-check-input" type="checkbox" value="xxs" checked="checked">
+              <label class="form-check-label" for="sizeXXS">XXS</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input id="sizeXS" class="form-check-input" type="checkbox" value="xs">
+              <label class="form-check-label" for="sizeXS">XS</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input id="sizeS" class="form-check-input" type="checkbox" value="s">
+              <label class="form-check-label" for="sizeS">S</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input id="sizeM" class="form-check-input" type="checkbox" value="m">
+              <label class="form-check-label" for="sizeM">M</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input id="sizeL" class="form-check-input" type="checkbox" value="l">
+              <label class="form-check-label" for="sizeL">L</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input id="sizeXL" class="form-check-input" type="checkbox" value="xl">
+              <label class="form-check-label" for="sizeXL">XL</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input id="sizeXXL" class="form-check-input" type="checkbox" value="xxl">
+              <label class="form-check-label" for="sizeXXL">L</label>
+            </div>
           </div>
 
+          <div class="form-group" ref="condition" onclick={ updateCondition }>
+            <p>Choose CONTIONS:</p>
+            <div class="form-check form-check-inline">
+              <input id="conditionNew" class="form-check-input" type="checkbox" value="new" checked="checked">
+              <label class="form-check-label" for="conditionNew">New</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input id="conditionUsedLikeNew" class="form-check-input" type="checkbox" value="used-like-new">
+              <label class="form-check-label" for="conditionUsedLikeNew">Used-like New</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input id="conditionUsedGood" class="form-check-input" type="checkbox" value="used-good">
+              <label class="form-check-label" for="conditionUsedGood">Used-good</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input id="conditionUsedAcceptable" class="form-check-input" type="checkbox" value="used-acceptable">
+              <label class="form-check-label" for="conditionUsedAcceptable">Used-acceptable</label>
+            </div>
+          </div>
           <button class="btn btn-secondary" type="button" onclick={ submit }>submit</button>
 
         </div>
         <div class="col-6">
           <div class="form-group">
             <label style="font-size:18px" for="story">Share a short story about why you need the item and how the item can help you.</label>
-            <textarea class="form-control" rows="5" ref="itemStory"></textarea>
+            <textarea class="form-control" rows="5" ref="itemWantedStory"></textarea>
           </div>
         </div>
       </div>
     </form>
+
+    <script>
+      var tag = this;
+      var itemWantedName = "";
+
+      updateGender(event) {
+        let checkedEls = [...this.refs.gender.querySelectorAll(':checked')];
+        itemWantedGender = checkedEls.map(el => el.value);
+      }
+
+      updateCategory(event) {
+        itemWantedCategory = event.target.value;
+      }
+
+      updateColor(event) {
+        let checkedEls = [...this.refs.color.querySelectorAll(':checked')];
+        itemWantedColor = checkedEls.map(el => el.value);
+      }
+
+      updateSize(event) {
+        let checkedEls = [...this.refs.size.querySelectorAll(':checked')];
+        itemWantedSize = checkedEls.map(el => el.value);
+      }
+
+      updateCondition(event) {
+        let checkedEls = [...this.refs.condition.querySelectorAll(':checked')];
+        itemWantedCondition = checkedEls.map(el => el.value);
+      }
+
+      submit() {
+        let itemWantedName = this.refs.itemWantedName.value;
+        let itemWantedStory = this.refs.itemWantedStory.value;
+
+        console.log(itemWantedName);
+        let itemWantedColRef = database.collection("itemWantedCollection");
+        let id = itemWantedColRef.doc().id;
+
+        itemWantedColRef.doc(id).set({
+          user: firebase.auth().currentUser.displayName,
+          id: id,
+          name: itemWantedName,
+          size: itemWantedSize,
+          color: itemWantedColor,
+          category: itemWantedCategory,
+          condition: itemWantedCondition,
+          story: itemWantedStory,
+          purpose: "wants to receive",
+          timestamp: firebase.firestore.FieldValue.serverTimestamp()
+        });
+      }
+    </script>
 
   </div>
 </askfordonation>

@@ -119,8 +119,6 @@
 
 			let uniqueName = this.file.name + "-" + Date.now();
 			let fileRef = mediaStorageRef.child(uniqueName);
-			let itemsRef = database.collection('items');
-			let id = itemsRef.doc().id;
 			let itemName = this.refs.itemName.value;
 			let itemStory = this.refs.itemStory.value;
 
@@ -134,7 +132,7 @@
 					return snapshot.ref.getDownloadURL();
 				}).then(downloadURL => {
 					itemColRef.doc(id).set({
-						owner: firebase.auth().currentUser.displayName,
+						user: firebase.auth().currentUser.displayName,
 						id: id,
 						name: itemName,
 						size: itemSize,
