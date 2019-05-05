@@ -181,12 +181,12 @@
       var itemWantedSize = "";
       var itemWantedColor = "";
       var itemWantedGender = "";
-      var itemWantedCondition =
+      var itemWantedCondition ="";
 
       updateImage(event) {
         let checkedEls = [...this.refs.image.querySelectorAll(':checked')];
         itemWantedImage = checkedEls.map(el => el.value);
-        console.log(checkedEls);
+        console.log(itemWantedImage[0]);
       }
 
       updateGender(event) {
@@ -225,7 +225,7 @@
           user: firebase.auth().currentUser.displayName,
           id: id,
           name: itemWantedName,
-          image: itemWantedImage,
+          image: itemWantedImage[0],
           size: itemWantedSize,
           color: itemWantedColor,
           category: itemWantedCategory,
@@ -234,6 +234,8 @@
           purpose: "wants to receive",
           timestamp: firebase.firestore.FieldValue.serverTimestamp()
         });
+
+          observable.trigger('modeChange');
       }
     </script>
 
