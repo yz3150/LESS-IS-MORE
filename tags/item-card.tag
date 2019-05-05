@@ -5,7 +5,7 @@
     </div>
 
     <div class="card-body">
-      <p style="text-align:center">{ item.purpose }</p>
+      <p style="text-align:center">{ item.user } { item.purpose }</p>
       <img src="{ item.mediaURL }" alt="item_img" width="100%">
       <div class="item-properties">
           <p>{ item.category } | { item.size } | { item.color } | { item.condition }</p>
