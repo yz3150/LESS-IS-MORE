@@ -2,7 +2,7 @@
   <div class="container">
     <div class="row">
       <div class="col">
-        <h1 class="headline"><img src="../assets/logo.png" alt="login_img" width="23%">
+        <h1 class="headline"><img src="../assets/logo.png" alt="login_img" width="23%" onclick={ toHomepage }>
           <span class="float-right">
             <div class="row">
               <div class="">
@@ -24,9 +24,9 @@
                   <button class="dropdown-item" type="button">Track my gift</button>
                   <button class="dropdown-item" type="button">Track my frequency</button>
                   <button onclick={ logout } class="dropdown-item" type="button">LOGOUT</button>
-                </div>
+                <!-- </div>
                 <button onclick={ toHomepage } class="btn btn-outline-dark">Homepage</button>
-              </div>
+              </div> -->
           </span>
         </h1>
         <hr class="hr">
