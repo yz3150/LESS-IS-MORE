@@ -48,6 +48,14 @@
 						</select>
 					</div>
 
+
+
+				
+
+
+				</div>
+				<div class="col-6">
+
 					<div class="form-group">
 						<select class="form-control" onchange={ updateSize }>
 							<option value="" selected="selected" disabled="disabled">Size</option>
@@ -72,9 +80,6 @@
 					</div>
 
 
-
-				</div>
-				<div class="col-6">
 					<div class="form-group">
 						<label style="font-size:18px" for="story">Please share a story of the item you'd like to donate.</label>
 						<textarea class="form-control" rows="5" ref="itemStory"></textarea>

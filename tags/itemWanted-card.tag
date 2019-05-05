@@ -1,12 +1,12 @@
 <itemwanted-card>
   <div class="card itemlist">
-    <div class="card-header bg-light">
-      <img src={ user.profileUrl } alt="profilePic" class="userProfile"> <span class="userName">{ item.userName }</span> 
-    </div>
+    <!-- <div class="card-header bg-light">
+      <img src={ user.profileUrl } alt="profilePic" class="userProfile"> <span class="userName">{ item.userName }</span>
+    </div> -->
 
     <div class="card-body">
       <p style="text-align:center">{ itemWanted.purpose }</p>
-      <img src="{  }" alt="itemWanted_img" width="100%">
+      <img src={ itemWanted.image } alt="itemWanted_img" width="100%">
       <div class="itemWanted-properties">
         <span>{ itemWanted.category } | { itemWanted.size } | { itemWanted.color } | { itemWanted.condition }</span>
       </div>

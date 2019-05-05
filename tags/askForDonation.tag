@@ -8,17 +8,20 @@
 				 <div class="card-body">
       <div class="row">
         <div class="col-6">
-          <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="image" id="wantedItemImgShirt" value="wantedItemImgShirt">
-            <label class="form-check-label" for="wantedItemImg">
-              <img src="../assets/illustration_shirt.jpg" alt="illustration_shirt" width="50%">
-            </label>
-          </div>
-          <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="image" id="wantedItemImgPants" value="wantedItemImgPants">
-            <label class="form-check-label" for="wantedItemImg">
-              <img src="../assets/illustration_pants.jpg" alt="illustration_pants" width="50%">
-            </label>
+          <div class="form-group" ref="image" onclick={ updateImage }>
+            <p>Choose Image</p>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="image" id="wantedItemImgShirt" value="../assets/illustration_shirt.jpg">
+              <label class="form-check-label" for="wantedItemImg">
+                <img src="../assets/illustration_shirt.jpg" alt="illustration_shirt" width="50%">
+              </label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="image" id="wantedItemImgPants" value="../assets/illustration_pants.jpg">
+              <label class="form-check-label" for="wantedItemImg">
+                <img src="../assets/illustration_pants.jpg" alt="illustration_pants" width="50%">
+              </label>
+            </div>
           </div>
 
           <div class="form-group">
@@ -40,7 +43,7 @@
           <div class="form-group" ref="gender" onclick={ updateGender }>
             <p>Choose GENDER:</p>
             <div class="form-check form-check-inline">
-              <input id="genderMale" class="form-check-input" type="checkbox" value="male" checked="checked">
+              <input id="genderMale" class="form-check-input" type="checkbox" value="male" checked>
               <label class="form-check-label" for="genderMale">Male</label>
             </div>
             <div class="form-check form-check-inline">
@@ -57,7 +60,7 @@
           <div class="form-group" ref="color" onclick={ updateColor }>
             <p>Choose COLOR:</p>
             <div class="form-check form-check-inline">
-              <input id="colorBlack" class="form-check-input" type="checkbox" value="black" checked="checked">
+              <input id="colorBlack" class="form-check-input" type="checkbox" value="black" checked>
               <label class="form-check-label" for="colorBlack">Black</label>
             </div>
             <div class="form-check form-check-inline">
@@ -103,7 +106,7 @@
           <div class="form-group" ref="size" onclick={ updateSize }>
             <p>Choose SIZE:</p>
             <div class="form-check form-check-inline">
-              <input id="sizeXXS" class="form-check-input" type="checkbox" value="xxs" checked="checked">
+              <input id="sizeXXS" class="form-check-input" type="checkbox" value="xxs" checked>
               <label class="form-check-label" for="sizeXXS">XXS</label>
             </div>
             <div class="form-check form-check-inline">
@@ -139,7 +142,7 @@
           <div class="form-group" ref="condition" onclick={ updateCondition }>
             <p>Choose CONDITION:</p>
             <div class="form-check form-check-inline">
-              <input id="conditionNew" class="form-check-input" type="checkbox" value="new" checked="checked">
+              <input id="conditionNew" class="form-check-input" type="checkbox" value="new" checked>
               <label class="form-check-label" for="conditionNew">New</label>
             </div>
             <div class="form-check form-check-inline">
@@ -157,10 +160,10 @@
           </div>
 
 
-
+          <hr>
           <div class="form-group textarea">
             <label style="font-size:18px" for="story">Share a short story about why you need the item and how the item can help you.</label>
-            <textarea class="form-control" rows="6" ref="itemWantedStory"></textarea>
+            <textarea class="form-control" rows="9" ref="itemWantedStory"></textarea>
           </div>
         </div>
       </div>
@@ -175,6 +178,16 @@
     <script>
       var tag = this;
       var itemWantedName = "";
+      var itemWantedSize = "";
+      var itemWantedColor = "";
+      var itemWantedGender = "";
+      var itemWantedCondition ="";
+
+      updateImage(event) {
+        let checkedEls = [...this.refs.image.querySelectorAll(':checked')];
+        itemWantedImage = checkedEls.map(el => el.value);
+        console.log(itemWantedImage[0]);
+      }
 
       updateGender(event) {
         let checkedEls = [...this.refs.gender.querySelectorAll(':checked')];
@@ -212,6 +225,7 @@
           user: firebase.auth().currentUser.displayName,
           id: id,
           name: itemWantedName,
+          image: itemWantedImage[0],
           size: itemWantedSize,
           color: itemWantedColor,
           category: itemWantedCategory,
@@ -220,6 +234,8 @@
           purpose: "wants to receive",
           timestamp: firebase.firestore.FieldValue.serverTimestamp()
         });
+
+          observable.trigger('modeChange');
       }
     </script>
 
@@ -242,7 +258,7 @@ padding-bottom: 20px;
 
   .textarea{
 
-  padding-top: 35px;
+  padding-top: 105px;
   }
 
 
