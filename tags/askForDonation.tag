@@ -181,7 +181,7 @@
       var itemWantedSize = "";
       var itemWantedColor = "";
       var itemWantedGender = "";
-      var itemWantedCondition =
+      var itemWantedCondition ="";
 
       updateImage(event) {
         let checkedEls = [...this.refs.image.querySelectorAll(':checked')];
