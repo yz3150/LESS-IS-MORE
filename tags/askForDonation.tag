@@ -9,9 +9,15 @@
       <div class="row">
         <div class="col-6">
           <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="image" id="wantedItemImg" value="wantedItemImg">
+            <input class="form-check-input" type="radio" name="image" id="wantedItemImgShirt" value="wantedItemImgShirt">
             <label class="form-check-label" for="wantedItemImg">
-              <img src="../assets/illustration_shirt.jpg" alt="" width="50%">
+              <img src="../assets/illustration_shirt.jpg" alt="illustration_shirt" width="50%">
+            </label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="image" id="wantedItemImgPants" value="wantedItemImgPants">
+            <label class="form-check-label" for="wantedItemImg">
+              <img src="../assets/illustration_pants.jpg" alt="illustration_pants" width="50%">
             </label>
           </div>
 
