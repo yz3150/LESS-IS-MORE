@@ -162,7 +162,7 @@
 
           <hr>
           <div class="form-group textarea">
-            <label style="font-size:18px" for="story"><strong>Share a short story about why you need the item and how the item can help you.</strong></label>
+            <label style="font-size:16px" for="story"><strong>Share a short story about why you need the item and how the item can help you.</strong></label>
             <textarea class="form-control" rows="11" ref="itemWantedStory"></textarea>
           </div>
         </div>
