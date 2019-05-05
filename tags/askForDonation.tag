@@ -1,9 +1,11 @@
 <askfordonation>
   <div class="container justify-content-center">
     <div class="row col-12">
-      <h3>Add the description of the item I want</h3>
+      <h3 class="adddess">Add the description of the item I want</h3>
     </div>
-    <form>
+    <form class="form">
+      <div class="card bg-light">
+				 <div class="card-body">
       <div class="row">
         <div class="col-6">
           <div class="form-check form-check-inline">
@@ -143,6 +145,8 @@
           </div>
         </div>
       </div>
+    </div>
+  </div>
     </form>
 
     <script>
@@ -197,4 +201,25 @@
     </script>
 
   </div>
+
+
+
+
+  <style>
+
+	.adddess{
+padding-bottom: 10px;
+padding-top: 20px;
+	}
+
+  .form{
+
+padding-bottom: 20px;
+
+  }
+
+
+	</style>
+
+
 </askfordonation>
