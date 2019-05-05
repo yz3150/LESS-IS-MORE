@@ -1,33 +1,58 @@
 <itemwanted-card>
   <div class="card itemlist">
     <div class="card-header bg-light">
-      <!-- <img src={ user.profileUrl } alt="profilePic" class="userProfile"> <span class="userName">{ item.userName }</span> -->
+      <img src={ user.profileUrl } alt="profilePic" class="userProfile"> <span class="userName">{ item.userName }</span>
     </div>
 
     <div class="card-body">
-      <p>name { itemWanted.name }</p>
-      <img src={ itemWanted.image } alt="">
-      <p>{ itemWanted.purpose }</p>
-
-      <span>{ itemWanted.category } | { itemWanted.size } | { itemWanted.color } | { itemWanted.condition }</span>
-      <p>Story: { itemWanted.story }</p>
-    </div>
-    <div class="card-footer">
-      <button type="button" name="button">LEARN MORE</button>
-      <div>
-        <button type="button" name="button" onclick={ delete }>Delete</button>
+      <p style="text-align:center">{ itemWanted.purpose }</p>
+      <img src="{  }" alt="itemWanted_img" width="100%">
+      <div class="itemWanted-properties">
+        <span>{ itemWanted.category } | { itemWanted.size } | { itemWanted.color } | { itemWanted.condition }</span>
+      </div>
+      <hr>
+      <div class="story-properties">
+        <p>Story: { itemWanted.story }</p>
       </div>
     </div>
-  </div>
+    <div class="card-footer">
+      <div class="row">
+        <div class="col-8">
+          <button type="button" name="button" class="btn btn-secondary">Learn More</button>
+        </div>
+        <div class="col-4">
+          <button type="button" name="button" class="btn btn-outline-secondary" onclick={ delete }>Delete</button>
+        </div>
+      </div>
+    </div>
 
-  <script>
-    var tag = this;
-    var itemWantedColRef = database.collection('itemWantedCollection');
+    <script>
+      var tag = this;
+      var itemWantedColRef = database.collection('itemWantedCollection');
 
-    delete() {
-      itemWantedColRef.doc(this.itemWanted.id).delete();
-      console.log("delete");
-    }
-  </script>
+      delete() {
+        itemWantedColRef.doc(this.itemWanted.id).delete();
+        console.log("delete");
+      }
+    </script>
 
+    <style>
+      .itemWanted-properties {
+        position: relative;
+        text-align: center;
+        top: 20px;
+        bottom: 60px;
+      }
+
+      .story-properties {
+        position: relative;
+        top: 20px;
+      }
+
+      hr {
+        position: relative;
+        top: 17px;
+        width: 75%;
+      }
+    </style>
 </itemwanted-card>

@@ -1,13 +1,14 @@
 <homepage>
   <div class="container justify-content-center">
     <div class="row col-12">
-      <h2>Newest Posts</h2>
+      <h3>Newest Posts</h3>
     </div>
     <div class="row">
         <item-card class="col-4" each={ item, i in items } items={ items }></item-card>
         <itemwanted-card class="col-4" each={ itemWanted, i in itemsWanted } itemswanted={ itemsWanted }></itemwanted-card>
     </div>
   </div>
+
 
   <script>
     var tag = this;
@@ -40,9 +41,16 @@
       margin-bottom: 10px;
     }
 
+    itemWanted-card{
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+
     h3{
       margin-top: 20px;
     }
+
+
   </style>
 
 </homepage>
