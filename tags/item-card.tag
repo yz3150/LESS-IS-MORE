@@ -1,6 +1,6 @@
 <item-card>
   <div class="card itemlist">
-    <div class="card-header bg-light">
+    <div class="card-header">
       <!-- <img src={ user.profileUrl } alt="profilePic" class="userProfile"><span class="userName">{ this.user.displayName }</span> -->
     </div>
 
@@ -56,6 +56,14 @@
       top: 17px;
       width: 75%;
     }
+
+  .card-body{
+
+    background-color: #E1E6E0;
+  }
+
+
+
 
   </style>
 </item-card>
