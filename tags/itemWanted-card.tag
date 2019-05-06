@@ -1,8 +1,8 @@
 <itemwanted-card>
   <div class="card itemlist">
-    <!-- <div class="card-header bg-light">
-      <img src={ user.profileUrl } alt="profilePic" class="userProfile"> <span class="userName">{ item.userName }</span>
-    </div> -->
+    <div class="card-header bg-light">
+      <span class="userName">{ item.userName }</span>
+    </div>
 
 <div class="card-body">
   <p style="text-align:center">
@@ -23,7 +23,7 @@
           <button type="button" name="button" class="btn btn-secondary">Learn More</button>
         </div>
         <div class="col-4">
-          <button type="button" name="button" class="btn btn-outline-secondary" onclick={ delete }>Delete</button>
+          <button if={ this.Wanteditem.user == currentUser } type="button" name="button" class="btn btn-outline-secondary" onclick={ delete }>Delete</button>
         </div>
       </div>
     </div>
@@ -31,9 +31,11 @@
     <script>
       var tag = this;
       var itemWantedColRef = database.collection('itemWantedCollection');
+      let itemsWantedByUsersColRef = database.collection("itemsByUsersCollection").doc(firebase.auth().currentUser.displayName).collection("itemsWantedcollection");
 
       delete() {
         itemWantedColRef.doc(this.itemWanted.id).delete();
+        itemsWantedByUsersColRef.doc(this.itemWanted.id).delete();
         console.log("delete");
       }
     </script>

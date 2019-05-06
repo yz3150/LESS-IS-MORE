@@ -1,7 +1,7 @@
 <item-card>
   <div class="card itemlist">
     <div class="card-header">
-      <!-- <img src={ user.profileUrl } alt="profilePic" class="userProfile"><span class="userName">{ this.user.displayName }</span> -->
+      <span class="userName">{ this.item.user }</span>
     </div>
 
     <div class="card-body">
@@ -22,18 +22,22 @@
           <button type="button" name="button" class="btn btn-secondary">Learn More</button>
         </div>
         <div class="col-4">
-          <button type="button" name="button" class="btn btn-outline-secondary" onclick={ delete }>Delete</button>
+          <button if={ this.item.user == currentUser } type="button" name="button" class="btn btn-outline-secondary" onclick={ delete }>Delete</button>
         </div>
     </div>
   </div>
 
   <script>
     var tag = this;
-    console.log(this.item.name);
+
     var itemColRef = database.collection('itemCollection');
+    let itemsByUsersColRef = database.collection("itemsByUsersCollection").doc(firebase.auth().currentUser.displayName).collection("itemscollection");
+
+
 
     delete() {
       itemColRef.doc(this.item.id).delete();
+      itemsByUsersColRef.doc(this.item.id).delete();
       console.log("delete");
     }
   </script>
