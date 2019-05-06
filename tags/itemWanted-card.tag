@@ -23,7 +23,7 @@
           <button type="button" name="button" class="btn btn-secondary">Learn More</button>
         </div>
         <div class="col-4">
-          <button if={ this.Wanteditem.user == currentUser } type="button" name="button" class="btn btn-outline-secondary" onclick={ delete }>Delete</button>
+          <button if={ this.itemWanted.user == currentUser } type="button" name="button" class="btn btn-outline-secondary" onclick={ delete }>Delete</button>
         </div>
       </div>
     </div>
