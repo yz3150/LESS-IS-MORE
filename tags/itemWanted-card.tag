@@ -1,14 +1,16 @@
 <itemwanted-card>
   <div class="card itemlist">
     <div class="card-header bg-light">
-      <span class="userName">{ this.itemWanted.user }</span>
+      <span class="userName">{ item.userName }</span>
     </div>
 
 <div class="card-body">
-  <p style="text-align:center">wants to<strong> { itemWanted.purpose }</strong></p>
+  <p style="text-align:center">
+    <strong>{ itemWanted.user }</strong>
+    { itemWanted.purpose }</p>
   <img src={ itemWanted.image } alt="itemWanted_img" width="100%">
   <div class="itemWanted-properties">
-    <p><strong>{ itemWanted.category }</strong> | <strong>Size { itemWanted.size }</strong> | <strong>{ itemWanted.color }</strong> | <strong>{ itemWanted.condition }</strong></p>
+    <span>{ itemWanted.category } | { itemWanted.size } | { itemWanted.color } | { itemWanted.condition }</span>
   </div>
   <hr>
   <div class="story-properties">
