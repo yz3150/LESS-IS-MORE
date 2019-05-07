@@ -36,11 +36,11 @@
               <div class="form-group">
                 <select class="form-control" onchange={ updateCategory }>
                   <option value="" selected="selected" disabled="disabled">Category</option>
-                  <option value="pants">Pants</option>
-                  <option value="shirt">Shirt</option>
-                  <option value="sweater">Sweater</option>
-                  <option value="jacket">Jacket</option>
-                  <option value="dress">Dress</option>
+                  <option value="Pants">Pants</option>
+                  <option value="Shirt">Shirt</option>
+                  <option value="Sweater">Sweater</option>
+                  <option value="Outerwear">Outerwear</option>
+                  <option value="Dress">Dress</option>
                 </select>
               </div>
 
@@ -68,35 +68,35 @@
                   <strong>Color:</strong>
                 </p>
                 <div class="form-check form-check-inline">
-                  <input id="colorBlack" class="form-check-input" type="checkbox" value="black">
+                  <input id="colorBlack" class="form-check-input" type="checkbox" value="Black">
                   <label class="form-check-label" for="colorBlack">Black</label>
                 </div>
                 <div class="form-check form-check-inline">
-                  <input id="colorWhite" class="form-check-input" type="checkbox" value="white">
+                  <input id="colorWhite" class="form-check-input" type="checkbox" value="White">
                   <label class="form-check-label" for="colorWhite">White</label>
                 </div>
                 <div class="form-check form-check-inline">
-                  <input id="colorGrey" class="form-check-input" type="checkbox" value="grey">
+                  <input id="colorGrey" class="form-check-input" type="checkbox" value="Grey">
                   <label class="form-check-label" for="colorGrey">Grey</label>
                 </div>
                 <div class="form-check form-check-inline">
-                  <input id="colorRed" class="form-check-input" type="checkbox" value="red">
+                  <input id="colorRed" class="form-check-input" type="checkbox" value="Red">
                   <label class="form-check-label" for="colorRed">Red</label>
                 </div>
                 <div class="form-check form-check-inline">
-                  <input id="colorYellow" class="form-check-input" type="checkbox" value="yellow">
+                  <input id="colorYellow" class="form-check-input" type="checkbox" value="Yellow">
                   <label class="form-check-label" for="colorYellow">Yellow</label>
                 </div>
                 <div class="form-check form-check-inline">
-                  <input id="colorBlue" class="form-check-input" type="checkbox" value="blue">
+                  <input id="colorBlue" class="form-check-input" type="checkbox" value="Blue">
                   <label class="form-check-label" for="colorBlue">Blue</label>
                 </div>
                 <div class="form-check form-check-inline">
-                  <input id="colorGreen" class="form-check-input" type="checkbox" value="green">
+                  <input id="colorGreen" class="form-check-input" type="checkbox" value="Green">
                   <label class="form-check-label" for="colorGreen">Green</label>
                 </div>
                 <div class="form-check form-check-inline">
-                  <input id="colorPurple" class="form-check-input" type="checkbox" value="purple">
+                  <input id="colorPurple" class="form-check-input" type="checkbox" value="Purple">
                   <label class="form-check-label" for="colorPurple">Purple</label>
                 </div>
               </div>
@@ -109,31 +109,31 @@
                   <strong>Size:</strong>
                 </p>
                 <div class="form-check form-check-inline">
-                  <input id="sizeXXS" class="form-check-input" type="checkbox" value="xxs">
+                  <input id="sizeXXS" class="form-check-input" type="checkbox" value="XXS">
                   <label class="form-check-label" for="sizeXXS">XXS</label>
                 </div>
                 <div class="form-check form-check-inline">
-                  <input id="sizeXS" class="form-check-input" type="checkbox" value="xs">
+                  <input id="sizeXS" class="form-check-input" type="checkbox" value="XXS">
                   <label class="form-check-label" for="sizeXS">XS</label>
                 </div>
                 <div class="form-check form-check-inline">
-                  <input id="sizeS" class="form-check-input" type="checkbox" value="s">
+                  <input id="sizeS" class="form-check-input" type="checkbox" value="S">
                   <label class="form-check-label" for="sizeS">S</label>
                 </div>
                 <div class="form-check form-check-inline">
-                  <input id="sizeM" class="form-check-input" type="checkbox" value="m">
+                  <input id="sizeM" class="form-check-input" type="checkbox" value="M">
                   <label class="form-check-label" for="sizeM">M</label>
                 </div>
                 <div class="form-check form-check-inline">
-                  <input id="sizeL" class="form-check-input" type="checkbox" value="l">
+                  <input id="sizeL" class="form-check-input" type="checkbox" value="L">
                   <label class="form-check-label" for="sizeL">L</label>
                 </div>
                 <div class="form-check form-check-inline">
-                  <input id="sizeXL" class="form-check-input" type="checkbox" value="xl">
+                  <input id="sizeXL" class="form-check-input" type="checkbox" value="XL">
                   <label class="form-check-label" for="sizeXL">XL</label>
                 </div>
                 <div class="form-check form-check-inline">
-                  <input id="sizeXXL" class="form-check-input" type="checkbox" value="xxl">
+                  <input id="sizeXXL" class="form-check-input" type="checkbox" value="XXL">
                   <label class="form-check-label" for="sizeXXL">L</label>
                 </div>
               </div>
@@ -143,20 +143,20 @@
                   <strong>Condition:</strong>
                 </p>
                 <div class="form-check form-check-inline">
-                  <input id="conditionNew" class="form-check-input" type="checkbox" value="new">
+                  <input id="conditionNew" class="form-check-input" type="checkbox" value="New">
                   <label class="form-check-label" for="conditionNew">New</label>
                 </div>
                 <div class="form-check form-check-inline">
-                  <input id="conditionUsedLikeNew" class="form-check-input" type="checkbox" value="used-like-new">
-                  <label class="form-check-label" for="conditionUsedLikeNew">Used-like New</label>
+                  <input id="conditionUsedLikeNew" class="form-check-input" type="checkbox" value="Used: like-new">
+                  <label class="form-check-label" for="conditionUsedLikeNew">Used: like-new</label>
                 </div>
                 <div class="form-check form-check-inline">
-                  <input id="conditionUsedGood" class="form-check-input" type="checkbox" value="used-good">
-                  <label class="form-check-label" for="conditionUsedGood">Used-good</label>
+                  <input id="conditionUsedGood" class="form-check-input" type="checkbox" value="Used: good">
+                  <label class="form-check-label" for="conditionUsedGood">Used: good</label>
                 </div>
                 <div class="form-check form-check-inline">
-                  <input id="conditionUsedAcceptable" class="form-check-input" type="checkbox" value="used-acceptable">
-                  <label class="form-check-label" for="conditionUsedAcceptable">Used-acceptable</label>
+                  <input id="conditionUsedAcceptable" class="form-check-input" type="checkbox" value="Used: acceptable">
+                  <label class="form-check-label" for="conditionUsedAcceptable">Used: acceptable</label>
                 </div>
               </div>
 
@@ -234,7 +234,7 @@
           category: itemWantedCategory,
           condition: itemWantedCondition,
           story: itemWantedStory,
-          purpose: "wants to receive",
+          purpose: "receive",
           timestamp: firebase.firestore.FieldValue.serverTimestamp()
 
         }

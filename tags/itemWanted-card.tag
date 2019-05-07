@@ -1,16 +1,14 @@
 <itemwanted-card>
   <div class="card itemlist">
     <div class="card-header bg-light">
-      <span class="userName">{ item.userName }</span>
+      <span class="userName"><strong>{ this.itemWanted.user }</strong></span>
     </div>
 
 <div class="card-body">
-  <p style="text-align:center">
-    <strong>{ itemWanted.user }</strong>
-    { itemWanted.purpose }</p>
+  <p style="text-align:center">wants to <strong>{ itemWanted.purpose }</strong></p>
   <img src={ itemWanted.image } alt="itemWanted_img" width="100%">
   <div class="itemWanted-properties">
-    <p>{ itemWanted.category } | Size { itemWanted.size } | { itemWanted.color } | { itemWanted.condition }</p>
+    <p><strong>{ itemWanted.category }</strong> | <strong>Size { itemWanted.size }</strong> | <strong> { itemWanted.color } </strong> | <strong> { itemWanted.condition } </strong></p>
   </div>
   <hr>
   <div class="story-properties">
@@ -19,9 +17,9 @@
 </div>
     <div class="card-footer">
       <div class="row">
-        <div class="col-8">
+        <!--<div class="col-8">
           <button type="button" name="button" class="btn btn-secondary">Learn More</button>
-        </div>
+        </div>-->
         <div class="col-4">
           <button if={ this.itemWanted.user == currentUser } type="button" name="button" class="btn btn-outline-secondary" onclick={ delete }>Delete</button>
         </div>

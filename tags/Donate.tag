@@ -72,7 +72,7 @@
 								<select class="form-control" onchange={ updateCondition }>
 									<option value="" selected="selected" disabled="disabled">Condition</option>
 									<option value="New">New</option>
-									<option value="Used: like-new">Used: like New</option>
+									<option value="Used: like-new">Used: like-new</option>
 									<option value="Used: good">Used: good</option>
 									<option value="Used: acceptable">Used: acceptable</option>
 								</select>
@@ -154,7 +154,7 @@
 						condition: itemCondition,
 						story: itemStory,
 						mediaURL: downloadURL,
-						purpose: "wants to donate",
+						purpose: "donate",
 						timestamp: firebase.firestore.FieldValue.serverTimestamp()
 
 					}
