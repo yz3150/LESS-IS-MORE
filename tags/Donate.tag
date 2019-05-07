@@ -30,25 +30,25 @@
 							<div class="form-group">
 								<select class="form-control" onchange={ updateCategory }>
 									<option value="" selected="selected" disabled="disabled">Category</option>
-									<option value="pants">Pants</option>
-									<option value="shirt">Shirt</option>
-									<option value="sweater">Sweater</option>
-									<option value="jacket">Jacket</option>
-									<option value="dress">Dress</option>
+									<option value="Pants">Pants</option>
+									<option value="Shirt">Shirt</option>
+									<option value="Sweater">Sweater</option>
+									<option value="Outerwear">Outerwear</option>
+									<option value="Dress">Dress</option>
 								</select>
 							</div>
 
 							<div class="form-group">
 								<select class="form-control" onchange={ updateColor }>
 									<option value="" selected="selected" disabled="disabled">Color</option>
-									<option value="black">Black</option>
-									<option value="white">White</option>
-									<option value="grey">Grey</option>
-									<option value="red">Red</option>
-									<option value="yellow">Yellow</option>
-									<option value="blue">Blue</option>
-									<option value="green">Green</option>
-									<option value="purple">Purple</option>
+									<option value="Black">Black</option>
+									<option value="White">White</option>
+									<option value="Grey">Grey</option>
+									<option value="Red">Red</option>
+									<option value="Yellow">Yellow</option>
+									<option value="Blue">Blue</option>
+									<option value="Green">Green</option>
+									<option value="Purple">Purple</option>
 								</select>
 							</div>
 
@@ -58,23 +58,23 @@
 							<div class="form-group">
 								<select class="form-control" onchange={ updateSize }>
 									<option value="" selected="selected" disabled="disabled">Size</option>
-									<option value="xxs">XXS</option>
-									<option value="xs">XS</option>
-									<option value="s">S</option>
-									<option value="m">M</option>
-									<option value="l">L</option>
-									<option value="xl">XL</option>
-									<option value="xxl">XXL</option>
+									<option value="XXS">XXS</option>
+									<option value="XS">XS</option>
+									<option value="S">S</option>
+									<option value="M">M</option>
+									<option value="L">L</option>
+									<option value="XL">XL</option>
+									<option value="XXL">XXL</option>
 								</select>
 							</div>
 
 							<div class="form-group">
 								<select class="form-control" onchange={ updateCondition }>
 									<option value="" selected="selected" disabled="disabled">Condition</option>
-									<option value="new">New</option>
-									<option value="used-like-new">Used-like New</option>
-									<option value="used-good">Used-good</option>
-									<option value="used-acceptable">Used-acceptable</option>
+									<option value="New">New</option>
+									<option value="Used: like-new">Used: like New</option>
+									<option value="Used: good">Used: good</option>
+									<option value="Used: acceptable">Used: acceptable</option>
 								</select>
 							</div>
 

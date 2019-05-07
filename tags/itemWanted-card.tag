@@ -10,7 +10,7 @@
     { itemWanted.purpose }</p>
   <img src={ itemWanted.image } alt="itemWanted_img" width="100%">
   <div class="itemWanted-properties">
-    <span>{ itemWanted.category } | { itemWanted.size } | { itemWanted.color } | { itemWanted.condition }</span>
+    <p>{ itemWanted.category } | Size { itemWanted.size } | { itemWanted.color } | { itemWanted.condition }</p>
   </div>
   <hr>
   <div class="story-properties">

@@ -8,7 +8,7 @@
       <p style="text-align:center"><strong>{ item.user }</strong> { item.purpose }</p>
       <img src="{ item.mediaURL }" alt="item_img" width="100%">
       <div class="item-properties">
-          <p>{ item.category } | { item.size } | { item.color } | { item.condition }</p>
+          <p><strong>{ item.category }</strong> | <strong>Size { item.size }</strong> | <strong>{ item.color }</strong> | <strong>{ item.condition }</strong></p>
       </div>
       <hr>
       <div class="story-properties">
