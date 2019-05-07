@@ -5,10 +5,10 @@
     </div>
 
     <div class="card-body">
-      <p style="text-align:center"><strong>{ item.user }</strong> { item.purpose }</p>
+      <p style="text-align:center">wants to <strong>{ item.purpose }</strong></p>
       <img src="{ item.mediaURL }" alt="item_img" width="100%">
       <div class="item-properties">
-          <p>{ item.category } | { item.size } | { item.color } | { item.condition }</p>
+          <p>{ item.category } | Size { item.size } | { item.color } | { item.condition }</p>
       </div>
       <hr>
       <div class="story-properties">
