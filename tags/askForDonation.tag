@@ -219,11 +219,12 @@
         let itemWantedName = this.refs.itemWantedName.value;
         let itemWantedStory = this.refs.itemWantedStory.value;
 
-        console.log(itemWantedName);
-        let itemWantedColRef = database.collection("itemWantedCollection");
-        let id = itemWantedColRef.doc().id;
 
-        itemWantedColRef.doc(id).set({
+        let itemWantedColRef = database.collection("itemWantedCollection").doc();
+        let id = itemWantedColRef.id;
+        let itemsWantedByUsersColRef = database.collection("itemsByUsersCollection").doc(firebase.auth().currentUser.displayName).collection("itemsWantedcollection").doc(id);
+
+        let itemWanted = {
           user: firebase.auth().currentUser.displayName,
           id: id,
           name: itemWantedName,
@@ -235,7 +236,14 @@
           story: itemWantedStory,
           purpose: "wants to receive",
           timestamp: firebase.firestore.FieldValue.serverTimestamp()
-        });
+
+        }
+
+        let batch = database.batch();
+        batch.set(itemWantedColRef, itemWanted);
+        batch.set(itemsWantedByUsersColRef, itemWanted);
+
+        batch.commit();
 
         observable.trigger('modeChange');
       }

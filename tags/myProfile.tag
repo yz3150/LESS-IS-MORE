@@ -3,31 +3,39 @@
     <div class="row">
       <div class="col-4">
         <p>My story</p>
-
       </div>
       <div class="col-4">
-        <item-card each={ item_user, i in items_user } items={ items_user }></item-card>
+        <item-card if={ this.item.user == currentUser } each={ item, i in items } items={ items }></item-card>
       </div>
-      <!-- <div class="col-4"> <itemwanted-card each={ itemWanted, i in itemsWanted } itemswanted={ itemsWanted }></itemwanted-card> </div> -->
+      <div class="col-4">
+        <itemwanted-card if={ this.itemWanted.user == currentUser } each={ itemWanted, i in itemsWanted } itemswanted={ itemsWanted }></itemwanted-card>
+      </div>
+      </div>
 
     </div>
   </div>
 
   <script>
     var tag = this;
-    var item_userColRef = database.collection("item_userCollection");
+    let itemsByUsersColRef = database.collection("itemsByUsersCollection").doc(firebase.auth().currentUser.displayName).collection("itemscollection");
+    let itemsWantedByUsersColRef = database.collection("itemsByUsersCollection").doc(firebase.auth().currentUser.displayName).collection("itemsWantedcollection");
 
-    item_userColRef.orderBy('timestamp', 'desc').onSnapshot(function (snapshot) {
-      var colItems_user = [];
+    itemsByUsersColRef.orderBy('timestamp', 'desc').onSnapshot(function (snapshot) {
+      var colItems = [];
       snapshot.forEach(function (doc) {
-        colItems_user.push(doc.data());
+        colItems.push(doc.data());
       });
-      tag.items = colItems_user;
+      tag.items = colItems;
       tag.update();
     })
 
-    // var itemWantedColRef = database.collection("itemWantedCollection");
-    //
-    // itemWantedColRef.orderBy('timestamp', 'desc').onSnapshot(function (snapshot) {   var colItemsWanted = [];   snapshot.forEach(function (doc) {     colItemsWanted.push(doc.data());   });   tag.itemsWanted = colItemsWanted;   tag.update(); }
+    itemsWantedByUsersColRef.orderBy('timestamp', 'desc').onSnapshot(function (snapshot) {
+      var colItemsWanted = [];
+      snapshot.forEach(function (doc) {
+        colItemsWanted.push(doc.data());
+      });
+      tag.itemsWanted = colItemsWanted;
+      tag.update();
+    })
   </script>
 </myprofile>

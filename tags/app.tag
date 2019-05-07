@@ -80,6 +80,8 @@
     firebase.auth().onAuthStateChanged(userObj => {
       if (userObj) {
         this.user = userObj;
+        currentUser = this.user.displayName;
+        console.log(userObj);
 
       } else {
         this.user = null;

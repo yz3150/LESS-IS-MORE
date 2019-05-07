@@ -6,88 +6,88 @@
 		</div>
 		<form class="form">
 			<div class="card">
-				 <div class="card-body">
-			<div class="row">
-				<div class="col-6">
+				<div class="card-body">
+					<div class="row">
+						<div class="col-6">
 
-					<div class="form-group">
-						<label style="font-size:16px" for="item-image"><strong>Upload an image of your item</strong></label>
-						<div class="custom-file">
-							<input type="file" ref="media" class="custom-file-input" onchange={ handleFiles }>
-							<label class="custom-file-label" for="item-image">{ fileLabel }</label>
+							<div class="form-group">
+								<label style="font-size:16px" for="item-image">
+									<strong>Upload an image of your item</strong>
+								</label>
+								<div class="custom-file">
+									<input type="file" ref="media" class="custom-file-input" onchange={ handleFiles }>
+									<label class="custom-file-label" for="item-image">{ fileLabel }</label>
+								</div>
+							</div>
+
+							<div class="form-group">
+								<label style="font-size:16px" for="item-name">
+									<strong>Name of your item</strong>
+								</label><br>
+								<input name="item-name" ref="itemName">
+							</div>
+
+							<div class="form-group">
+								<select class="form-control" onchange={ updateCategory }>
+									<option value="" selected="selected" disabled="disabled">Category</option>
+									<option value="pants">Pants</option>
+									<option value="shirt">Shirt</option>
+									<option value="sweater">Sweater</option>
+									<option value="jacket">Jacket</option>
+									<option value="dress">Dress</option>
+								</select>
+							</div>
+
+							<div class="form-group">
+								<select class="form-control" onchange={ updateColor }>
+									<option value="" selected="selected" disabled="disabled">Color</option>
+									<option value="black">Black</option>
+									<option value="white">White</option>
+									<option value="grey">Grey</option>
+									<option value="red">Red</option>
+									<option value="yellow">Yellow</option>
+									<option value="blue">Blue</option>
+									<option value="green">Green</option>
+									<option value="purple">Purple</option>
+								</select>
+							</div>
+
 						</div>
-					</div>
+						<div class="col-6">
 
-					<div class="form-group">
-						<label style="font-size:16px" for="item-name"><strong>Name of your item</strong></label><br>
-						<input name="item-name" ref="itemName">
-					</div>
+							<div class="form-group">
+								<select class="form-control" onchange={ updateSize }>
+									<option value="" selected="selected" disabled="disabled">Size</option>
+									<option value="xxs">XXS</option>
+									<option value="xs">XS</option>
+									<option value="s">S</option>
+									<option value="m">M</option>
+									<option value="l">L</option>
+									<option value="xl">XL</option>
+									<option value="xxl">XXL</option>
+								</select>
+							</div>
 
-					<div class="form-group">
-						<select class="form-control" onchange={ updateCategory }>
-							<option value="" selected="selected" disabled="disabled">Category</option>
-							<option value="pants">Pants</option>
-							<option value="shirt">Shirt</option>
-							<option value="sweater">Sweater</option>
-							<option value="jacket">Jacket</option>
-							<option value="dress">Dress</option>
-						</select>
-					</div>
+							<div class="form-group">
+								<select class="form-control" onchange={ updateCondition }>
+									<option value="" selected="selected" disabled="disabled">Condition</option>
+									<option value="new">New</option>
+									<option value="used-like-new">Used-like New</option>
+									<option value="used-good">Used-good</option>
+									<option value="used-acceptable">Used-acceptable</option>
+								</select>
+							</div>
 
-					<div class="form-group">
-						<select class="form-control" onchange={ updateColor }>
-							<option value="" selected="selected" disabled="disabled">Color</option>
-							<option value="black">Black</option>
-							<option value="white">White</option>
-							<option value="grey">Grey</option>
-							<option value="red">Red</option>
-							<option value="yellow">Yellow</option>
-							<option value="blue">Blue</option>
-							<option value="green">Green</option>
-							<option value="purple">Purple</option>
-						</select>
-					</div>
-
-
-
-
-
-
-				</div>
-				<div class="col-6">
-
-					<div class="form-group">
-						<select class="form-control" onchange={ updateSize }>
-							<option value="" selected="selected" disabled="disabled">Size</option>
-							<option value="xxs">XXS</option>
-							<option value="xs">XS</option>
-							<option value="s">S</option>
-							<option value="m">M</option>
-							<option value="l">L</option>
-							<option value="xl">XL</option>
-							<option value="xxl">XXL</option>
-						</select>
-					</div>
-
-					<div class="form-group">
-						<select class="form-control" onchange={ updateCondition }>
-							<option value="" selected="selected" disabled="disabled">Condition</option>
-							<option value="new">New</option>
-							<option value="used-like-new">Used-like New</option>
-							<option value="used-good">Used-good</option>
-							<option value="used-acceptable">Used-acceptable</option>
-						</select>
-					</div>
-
-
-					<div class="form-group">
-						<label style="font-size:16px" for="story"><strong>Please share a story of the item you'd like to donate.</strong></label>
-						<textarea class="form-control" rows="5" ref="itemStory"></textarea>
+							<div class="form-group">
+								<label style="font-size:16px" for="story">
+									<strong>Please share a story of the item you'd like to donate.</strong>
+								</label>
+								<textarea class="form-control" rows="5" ref="itemStory"></textarea>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
-		</div>
-	</div>
 		</form>
 		<button class="btn btn-secondary" type="button">+ Add more items</button>
 		<button class="btn btn-secondary" type="button" onclick={ submit }>submit</button>
@@ -135,14 +135,16 @@
 
 			if (itemName !== undefined) {
 
-				let itemColRef = database.collection("itemCollection");
-				let id = itemColRef.doc().id;
+				let itemColRef = database.collection("itemCollection").doc();
+				let id = itemColRef.id;
+				let itemsByUsersColRef = database.collection("itemsByUsersCollection").doc(firebase.auth().currentUser.displayName).collection("itemscollection").doc(id);
 
 				fileRef.put(this.file).then(snapshot => {
 					console.log('uploaded file');
 					return snapshot.ref.getDownloadURL();
 				}).then(downloadURL => {
-					itemColRef.doc(id).set({
+
+					let item = {
 						user: firebase.auth().currentUser.displayName,
 						id: id,
 						name: itemName,
@@ -154,12 +156,19 @@
 						mediaURL: downloadURL,
 						purpose: "wants to donate",
 						timestamp: firebase.firestore.FieldValue.serverTimestamp()
-					});
 
+					}
 					this.update();
+
+					let batch = database.batch();
+					batch.set(itemColRef, item);
+					batch.set(itemsByUsersColRef, item);
+
+					batch.commit();
+
 				});
 
-observable.trigger('modeChange');
+				observable.trigger('modeChange');
 			}
 
 		}
@@ -167,23 +176,20 @@ observable.trigger('modeChange');
 
 	<style>
 
-	.adddes{
-padding-bottom: 10px;
-padding-top: 20px;
-	}
+		.adddes {
+			padding-bottom: 10px;
+			padding-top: 20px;
+		}
 
-	.form{
+		.form {
 
-		padding-bottom: 20px;
-	}
+			padding-bottom: 20px;
+		}
 
-	.card{
+		.card {
 
-		background-color: #E1E6E0;
-	}
-
+			background-color: #E1E6E0;
+		}
 	</style>
-
-
 
 </donate>
