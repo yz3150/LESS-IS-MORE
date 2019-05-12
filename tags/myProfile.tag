@@ -5,11 +5,11 @@
         <p>My story</p>
       </div>
       <div class="col-4">
-        <item-card if={ this.item.user == currentUser } each={ item, i in sortedCards } sortedCards={ sortedCards }></item-card>
+        <item-card each={ item, i in items } items={ items }></item-card>
       </div>
-      <!-- <div class="col-4">
-        <itemwanted-card if={ this.itemWanted.user == currentUser } each={ itemWanted, i in itemsWanted } itemswanted={ itemsWanted }></itemwanted-card>
-      </div> -->
+      <div class="col-4">
+        <item-card each={ item, i in itemsWanted } itemswanted={ itemsWanted }></item-card>
+      </div>
       </div>
 
     </div>
