@@ -4,11 +4,23 @@
       <span class="userName"><strong>{ this.item.user }</strong></span>
     </div>
 
-    <div class="card-body">
+    <div if={ this.item.purpose =="donate" } class="card-body-donate">
       <p style="text-align:center">wants to <strong>{ item.purpose }</strong></p>
       <img src="{ item.mediaURL }" alt="item_img" width="100%">
       <div class="item-properties">
           <p><strong>{ item.category }</strong> | <strong>Size { item.size }</strong> | <strong>{ item.color }</strong> | <strong>{ item.condition }</strong></p>
+      </div>
+      <hr>
+      <div class="story-properties">
+        <p>Story: { item.story }</p>
+      </div>
+    </div>
+
+    <div if={ this.item.purpose == "receive" } class="card-body-receive">
+      <p style="text-align:center">wants to <strong>{ item.purpose }</strong></p>
+      <img src={ item.image } alt="itemWanted_img" width="100%">
+      <div class="itemWanted-properties">
+        <p><strong>{ item.category }</strong> | <strong>Size { item.size }</strong> | <strong> { item.color } </strong> | <strong> { item.condition } </strong></p>
       </div>
       <hr>
       <div class="story-properties">
@@ -29,17 +41,23 @@
 
   <script>
     var tag = this;
+    console.log(this.purpose);
 
     var itemColRef = database.collection('itemCollection');
     let itemsByUsersColRef = database.collection("itemsByUsersCollection").doc(firebase.auth().currentUser.displayName).collection("itemscollection");
+    var itemWantedColRef = database.collection('itemWantedCollection');
+    let itemsWantedByUsersColRef = database.collection("itemsByUsersCollection").doc(firebase.auth().currentUser.displayName).collection("itemsWantedcollection");
 
 
 
     delete() {
       itemColRef.doc(this.item.id).delete();
       itemsByUsersColRef.doc(this.item.id).delete();
+      itemWantedColRef.doc(this.item.id).delete();
+      itemsWantedByUsersColRef.doc(this.item.id).delete();
       console.log("delete");
     }
+
   </script>
 
   <style>
@@ -61,9 +79,13 @@
       width: 75%;
     }
 
-  .card-body{
+  .card-body-donate{
 
     background-color: #E1E6E0;
+  }
+
+  .card-body-receive{
+    background-color: #c3b8a7;
   }
 
   .card{

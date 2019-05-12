@@ -224,7 +224,7 @@
         let id = itemWantedColRef.id;
         let itemsWantedByUsersColRef = database.collection("itemsByUsersCollection").doc(firebase.auth().currentUser.displayName).collection("itemsWantedcollection").doc(id);
 
-        let itemWanted = {
+        let item = {
           user: firebase.auth().currentUser.displayName,
           id: id,
           name: itemWantedName,
@@ -240,8 +240,8 @@
         }
 
         let batch = database.batch();
-        batch.set(itemWantedColRef, itemWanted);
-        batch.set(itemsWantedByUsersColRef, itemWanted);
+        batch.set(itemWantedColRef, item);
+        batch.set(itemsWantedByUsersColRef, item);
 
         batch.commit();
 

@@ -1,4 +1,4 @@
-<itemwanted-card>
+<!-- <itemwanted-card>
   <div class="card itemlist">
     <div class="card-header bg-light">
       <span class="userName"><strong>{ this.itemWanted.user }</strong></span>
@@ -17,9 +17,6 @@
 </div>
     <div class="card-footer">
       <div class="row">
-        <!--<div class="col-8">
-          <button type="button" name="button" class="btn btn-secondary">Learn More</button>
-        </div>-->
         <div class="col-4">
           <button if={ this.itemWanted.user == currentUser } type="button" name="button" class="btn btn-outline-secondary" onclick={ delete }>Delete</button>
         </div>
@@ -64,4 +61,4 @@
 
 
     </style>
-</itemwanted-card>
+</itemwanted-card> -->
