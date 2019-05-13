@@ -6,7 +6,7 @@
 
     <div if={ this.item.purpose =="donate" } class="card-body-donate">
       <p style="text-align:center" class="para">wants to <strong>{ item.purpose }</strong></p>
-      <img src="{ item.mediaURL }" alt="item_img" width="100%">
+      <img src="{ item.mediaURL }" alt="item_img" width="80%">
       <div class="item-properties">
           <p><strong>{ item.category }</strong> | <strong>Size { item.size }</strong> | <strong>{ item.color }</strong> | <strong>{ item.condition }</strong></p>
       </div>
@@ -18,7 +18,7 @@
 
     <div if={ this.item.purpose == "receive" } class="card-body-receive">
       <p style="text-align:center" class="para">wants to <strong>{ item.purpose }</strong></p>
-      <img src={ item.image } alt="itemWanted_img" width="100%">
+      <img src={ item.image } alt="itemWanted_img" width="80%">
       <div class="item-properties">
         <p><strong>{ item.category }</strong> | <strong>Size { item.size }</strong> | <strong> { item.color } </strong> | <strong> { item.condition } </strong></p>
       </div>
