@@ -5,7 +5,7 @@
     </div>
 
     <div if={ this.item.purpose =="donate" } class="card-body-donate">
-      <p style="text-align:center">wants to <strong>{ item.purpose }</strong></p>
+      <p style="text-align:center" class="para">wants to <strong>{ item.purpose }</strong></p>
       <img src="{ item.mediaURL }" alt="item_img" width="100%">
       <div class="item-properties">
           <p><strong>{ item.category }</strong> | <strong>Size { item.size }</strong> | <strong>{ item.color }</strong> | <strong>{ item.condition }</strong></p>
@@ -17,9 +17,9 @@
     </div>
 
     <div if={ this.item.purpose == "receive" } class="card-body-receive">
-      <p style="text-align:center">wants to <strong>{ item.purpose }</strong></p>
+      <p style="text-align:center" class="para">wants to <strong>{ item.purpose }</strong></p>
       <img src={ item.image } alt="itemWanted_img" width="100%">
-      <div class="itemWanted-properties">
+      <div class="item-properties">
         <p><strong>{ item.category }</strong> | <strong>Size { item.size }</strong> | <strong> { item.color } </strong> | <strong> { item.condition } </strong></p>
       </div>
       <hr>
@@ -70,7 +70,7 @@
 
     .story-properties{
       position: relative;
-      top: 20px;
+      top: 10px;
     }
 
     hr{
@@ -79,19 +79,31 @@
       width: 75%;
     }
 
-  .card-body-donate{
+  .para{
+    position: relative;
+    top: 7px;
+  }
 
+  .card-body-donate{
     background-color: #E1E6E0;
+    position: relative;
+    text-align: center;
+    top: 0px;
   }
 
   .card-body-receive{
     background-color: #c3b8a7;
+    position: relative;
+    text-align: center;
   }
+
 
   .card{
     margin-top: 10px;
     margin-bottom: 10px;
   }
+
+
 
 
   </style>
