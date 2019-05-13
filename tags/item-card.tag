@@ -70,7 +70,8 @@
 
     .story-properties{
       position: relative;
-      top: 10px;
+      text-align: inherit;
+      top:10px;
     }
 
     hr{
