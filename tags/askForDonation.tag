@@ -12,50 +12,23 @@
                 <p>
                   <strong>Choose image</strong>
                 </p>
-                <div class="row">
-                <div class="col-3 form-check form-check-inline">
+                <div class="form-check form-check-inline">
                   <input class="form-check-input" type="radio" name="image" id="wantedItemImgShirt" value="../assets/illustration_shirt.jpg">
                   <label class="form-check-label" for="wantedItemImg">
-                    <img src="../assets/illustration_shirt.jpg" alt="illustration_shirt" width="100%">
+                    <img src="../assets/illustration_shirt.jpg" alt="illustration_shirt" width="50%">
                   </label>
                 </div>
-
-                <div class="col-3 form-check form-check-inline">
+                <div class="form-check form-check-inline">
                   <input class="form-check-input" type="radio" name="image" id="wantedItemImgPants" value="../assets/illustration_pants.jpg">
                   <label class="form-check-label" for="wantedItemImg">
-                    <img src="../assets/illustration_pants.jpg" alt="illustration_pants" width="100%">
+                    <img src="../assets/illustration_pants.jpg" alt="illustration_pants" width="27%">
                   </label>
                 </div>
               </div>
-            </div>
 
-             <div class="row">
-              <div class="col-3 form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="image" id="wantedItemImgShirt" value="../assets/illustration_shirt.jpg">
-                <label class="form-check-label" for="wantedItemImg">
-                  <img src="../assets/sweater.png" alt="sweater" width="100%">
-                </label>
-              </div>
-
-              <div class="col-3 form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="image" id="wantedItemImgShirt" value="../assets/illustration_shirt.jpg">
-                <label class="form-check-label" for="wantedItemImg">
-                  <img src="../assets/outwear.png" alt="illustration_shirt" width="100%">
-                </label>
-              </div>
-
-              <div class="col-3 form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="image" id="wantedItemImgShirt" value="../assets/illustration_shirt.jpg">
-                <label class="form-check-label" for="wantedItemImg">
-                  <img src="../assets/dress.png" alt="illustration_shirt" width="100%">
-                </label>
-              </div>
-
-            </div>
-               <br>
               <div class="form-group">
-                <label for="item-name">
-                  <strong style="paddingtop:10px">Name of your item</strong>
+                <label style="font-size:16px" for="item-name">
+                  <strong>Name of your item</strong>
                 </label><br>
                 <input name="item-name" ref="itemWantedName">
               </div>
@@ -292,7 +265,7 @@
 
     .textarea {
 
-      padding-top: 0px;
+      padding-top: 105px;
     }
 
     .card {
