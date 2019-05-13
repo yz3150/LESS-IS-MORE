@@ -12,7 +12,7 @@
       </div>
       <hr>
       <div class="story-properties">
-        <p><strong>Story:</strong> { item.story }</p>
+        <p>Story: { item.story }</p>
       </div>
     </div>
 
@@ -24,7 +24,7 @@
       </div>
       <hr>
       <div class="story-properties">
-        <p><strong>Story:</strong> { item.story }</p>
+        <p>Story: { item.story }</p>
       </div>
     </div>
 
@@ -69,7 +69,7 @@
     }
 
     .story-properties{
-      position:inherit;
+      position: relative;
       top: 10px;
     }
 
