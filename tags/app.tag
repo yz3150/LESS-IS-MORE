@@ -3,7 +3,7 @@
     <div class="row">
       <div class="col">
         <h1 class="headline">
-          <a href="#"><img src="../assets/logo.png" alt="login_img" width="23%" onclick={ toHomepage }></a>
+          <a href="#"><img src="https://firebasestorage.googleapis.com/v0/b/lessismore-22476.appspot.com/o/media%2Flogo.png?alt=media&token=90d13484-c1a4-4ba7-a339-21518c23f04d" alt="login_img" width="23%" onclick={ toHomepage }></a>
 
           <span class="float-right">
             <div class="row">
