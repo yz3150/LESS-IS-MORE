@@ -33,7 +33,7 @@
           </span>
         </h1>
         <hr class="hr">
-        <img src="../assets/Log-in.jpg" alt="login_img" hide={ user } width="100%">
+        <img src="../assets/Log-in-new.jpg" alt="login_img" hide={ user } width="100%">
       </div>
     </div>
 
