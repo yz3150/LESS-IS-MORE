@@ -15,36 +15,36 @@
 
                 <div class="row" style="margin-left:16px;">
                   <div class="col-3 form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="image" id="wantedItemImgPants" value="../assets/illustration_pants.jpg">
+                    <input class="form-check-input" type="radio" name="image" id="wantedItemImgPants" value="https://firebasestorage.googleapis.com/v0/b/lessismore-22476.appspot.com/o/media%2FIllustration_pants.jpg?alt=media&token=87341d89-7b9c-4e68-85d5-4dbecef0d903">
                     <label class="form-check-label" for="wantedItemImgPants">
-                      <img src="../assets/illustration_pants.jpg" alt="illustration_pants" width="75%" style="margin:16px;">
+                      <img src="https://firebasestorage.googleapis.com/v0/b/lessismore-22476.appspot.com/o/media%2FIllustration_pants.jpg?alt=media&token=87341d89-7b9c-4e68-85d5-4dbecef0d903" alt="illustration_pants" width="75%" style="margin:16px;">
                     </label>
                   </div>
                   <div class="col-3 form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="image" id="wantedItemImgShirt" value="../assets/illustration_shirt.jpg">
+                    <input class="form-check-input" type="radio" name="image" id="wantedItemImgShirt" value="https://firebasestorage.googleapis.com/v0/b/lessismore-22476.appspot.com/o/media%2Fillustration_shirt.jpg?alt=media&token=4798f2b8-2246-427d-8b47-11e5fdcf7542">
                     <label class="form-check-label" for="wantedItemImgShirt">
-                      <img src="../assets/illustration_shirt.jpg" alt="illustration_shirt" width="85%" style="margin:16px;">
+                      <img src="https://firebasestorage.googleapis.com/v0/b/lessismore-22476.appspot.com/o/media%2Fillustration_shirt.jpg?alt=media&token=4798f2b8-2246-427d-8b47-11e5fdcf7542" alt="illustration_shirt" width="85%" style="margin:16px;">
                     </label>
                   </div>
                 </div>
 
                 <div class="row" style="margin-left:16px;">
                   <div class="col-3 form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="image" id="wantedItemImgSweater" value="../assets/sweater.png">
+                    <input class="form-check-input" type="radio" name="image" id="wantedItemImgSweater" value="https://firebasestorage.googleapis.com/v0/b/lessismore-22476.appspot.com/o/media%2Fsweater.png?alt=media&token=7e700d75-5c45-4c02-b2b5-f29cb0b54cdf">
                     <label class="form-check-label" for="wantedItemImgSweater">
-                      <img src="../assets/sweater.png" alt="illustration_sweater" width="75%" style="margin:16px;">
+                      <img src="https://firebasestorage.googleapis.com/v0/b/lessismore-22476.appspot.com/o/media%2Fsweater.png?alt=media&token=7e700d75-5c45-4c02-b2b5-f29cb0b54cdf" alt="illustration_sweater" width="75%" style="margin:16px;">
                     </label>
                   </div>
                   <div class="col-3 form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="image" id="wantedItemImgOutwear" value="../assets/outwear.png">
+                    <input class="form-check-input" type="radio" name="image" id="wantedItemImgOutwear" value="https://firebasestorage.googleapis.com/v0/b/lessismore-22476.appspot.com/o/media%2Foutwear.png?alt=media&token=e72ed21c-a3db-4acc-9904-059dda13f3e1">
                     <label class="form-check-label" for="wantedItemImgOutwear">
-                      <img src="../assets/outwear.png" alt="illustration_outwear" width="80%" style="margin:16px;">
+                      <img src="https://firebasestorage.googleapis.com/v0/b/lessismore-22476.appspot.com/o/media%2Foutwear.png?alt=media&token=e72ed21c-a3db-4acc-9904-059dda13f3e1" alt="illustration_outwear" width="80%" style="margin:16px;">
                     </label>
                   </div>
                   <div class="col-3 form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="image" id="wantedItemImgDress" value="../assets/dress.png">
+                    <input class="form-check-input" type="radio" name="image" id="wantedItemImgDress" value="https://firebasestorage.googleapis.com/v0/b/lessismore-22476.appspot.com/o/media%2Fdress.png?alt=media&token=b47aafa1-2ce9-48d6-af80-95f24a82224b">
                     <label class="form-check-label" for="wantedItemImgDress">
-                      <img src="../assets/dress.png" alt="illustration_dress" width="80%" style="margin:16px;">
+                      <img src="https://firebasestorage.googleapis.com/v0/b/lessismore-22476.appspot.com/o/media%2Fdress.png?alt=media&token=b47aafa1-2ce9-48d6-af80-95f24a82224b" alt="illustration_dress" width="80%" style="margin:16px;">
                     </label>
                   </div>
                 </div>
