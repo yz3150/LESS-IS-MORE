@@ -33,7 +33,7 @@
           </span>
         </h1>
         <hr class="hr">
-        <img src="https://firebasestorage.googleapis.com/v0/b/lessismore-22476.appspot.com/o/media%2FLog-in-new.jpg?alt=media&token=b39e511b-556d-453e-8db1-e7a7e4af59cf" alt="login_img" hide={ user } width="100%">
+        <img src="gs://lessismore-22476.appspot.com/media/Log-in-new.jpg" alt="login_img" hide={ user } width="100%">
       </div>
     </div>
 
