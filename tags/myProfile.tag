@@ -1,19 +1,22 @@
 <myprofile>
   <div class="container">
     <div class="row">
-      <div class="col-3">
-        <p>suggestion:</p>
+
+      <div class="col-3 profile">
+        <h5 style="margin:20px;">Receiver Suggestion</h5>
         <item-card if={ this.item.user != currentUser } each={ item, i in itemsWanted} itemswanted={ itemsWanted }></item-card>
       </div>
-      <div class="col-3">
+      <div style="padding-right:30px;" class="col-3">
+        <h5 style="color:#6e757c; margin:20px;">My Donation</h5>
         <item-card each={ item, i in itemsByUser } itemsbyuser={ itemsByUser }></item-card>
       </div>
 
-      <div class="col-3">
+      <div style="padding-left:30px;" class="col-3">
+        <h5 style="color:#6e757c; margin:20px;">My Request</h5>
         <item-card each={ item, i in itemsWantedByUser } itemswantedbyuser={ itemsWantedByUser }></item-card>
       </div>
-      <div class="col-3">
-        <p>suggestion:</p>
+      <div class="col-3 profile">
+        <h5 style="margin:20px;">Donor Suggestion</h5>
         <item-card if={ this.item.user != currentUser } each={ item, i in items} items={ items }></item-card>
       </div>
 
@@ -80,4 +83,19 @@
       tag.update();
     })
   </script>
+
+  <style>
+  .profile{
+    background-color: #8c5756;
+    border-color: #000000;
+    border-width: thick;
+    border-radius: 5px;
+  }
+
+h5{
+color: #efebe6;
+}
+  </style>
+
+
 </myprofile>
