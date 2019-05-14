@@ -30,17 +30,32 @@
   <script src="https://www.gstatic.com/firebasejs/5.9.4/firebase.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.11/lodash.min.js"></script>
 
+
+
+  <!-- <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-app.js"></script> -->
+
   <script>
-    // Initialize Firebase
-    var config = {
-      apiKey: "AIzaSyBpgsXC03WuJ1wbwCT1dWtOKhNl5aFiWIU",
-      authDomain: "less-is-more-30192.firebaseapp.com",
-      databaseURL: "https://less-is-more-30192.firebaseio.com",
-      projectId: "less-is-more-30192",
-      storageBucket: "less-is-more-30192.appspot.com",
-      messagingSenderId: "26916945302"
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+      apiKey: "AIzaSyAsKNdru-cf7YbJWGQBA869_r6xD4lfZGU",
+      authDomain: "lessismore-22476.firebaseapp.com",
+      databaseURL: "https://lessismore-22476.firebaseio.com",
+      projectId: "lessismore-22476",
+      storageBucket: "lessismore-22476.appspot.com",
+      messagingSenderId: "29388222450",
+      appId: "1:29388222450:web:7e9815deb4f43726"
     };
-    firebase.initializeApp(config);
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    // var config = {
+    //   apiKey: "AIzaSyBpgsXC03WuJ1wbwCT1dWtOKhNl5aFiWIU",
+    //   authDomain: "less-is-more-30192.firebaseapp.com",
+    //   databaseURL: "https://less-is-more-30192.firebaseio.com",
+    //   projectId: "less-is-more-30192",
+    //   storageBucket: "less-is-more-30192.appspot.com",
+    //   messagingSenderId: "26916945302"
+    // };
+    // firebase.initializeApp(config);
 
     let database = firebase.firestore();
     let storage = firebase.storage();
