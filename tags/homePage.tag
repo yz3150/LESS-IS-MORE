@@ -5,19 +5,18 @@
     </div>
     <div class="row">
 
-        <item-card class="col-4" each={ item, i in sortedCards } sortedCards={ sortedCards }></item-card>
+      <item-card class="col-4" each={ item, i in sortedCards } sortedcards={ sortedCards }></item-card>
 
-        <!-- <itemwanted-card class="col-4" each={ itemWanted, i in itemsWanted } itemswanted={ itemsWanted }></itemwanted-card> -->
+      <!-- <itemwanted-card class="col-4" each={ itemWanted, i in itemsWanted } itemswanted={ itemsWanted }></itemwanted-card> -->
     </div>
   </div>
-
 
   <script>
     var tag = this;
     var itemColRef = database.collection("itemCollection");
 
-    this.on('mount', function(){
-      itemColRef.orderBy('timestamp', 'desc').onSnapshot(function(snapshot) {
+    this.on('mount', function () {
+      itemColRef.orderBy('timestamp', 'desc').onSnapshot(function (snapshot) {
         var colItems = [];
         snapshot.forEach(function (doc) {
           colItems.push(doc.data());
@@ -38,23 +37,15 @@
           // var _ = require('lodash');
           var mixedCards = _.concat(tag.items, tag.itemsWanted);
           tag.sortedCards = _.sortBy(mixedCards, ['timestamp']).reverse();
-          console.log(tag.sortedCards);
           tag.update();
         })
       })
 
-
-
-
     })
-
-
-
-
   </script>
 
   <style>
-    item-card{
+    item-card {
       margin-top: 10px;
       margin-bottom: 10px;
     }
@@ -64,11 +55,9 @@
       margin-bottom: 10px;
     } */
 
-    h3{
+    h3 {
       margin-top: 20px;
     }
-
-
   </style>
 
 </homepage>

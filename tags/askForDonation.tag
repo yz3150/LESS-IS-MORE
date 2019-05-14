@@ -14,41 +14,41 @@
                 </p>
 
                 <div class="row" style="margin-left:16px;">
-                <div class="col-3 form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="image" id="wantedItemImgPants" value="../assets/illustration_pants.jpg">
-                  <label class="form-check-label" for="wantedItemImgPants">
-                    <img src="../assets/illustration_pants.jpg" alt="illustration_pants" width="75%" style="margin:16px;">
-                  </label>
+                  <div class="col-3 form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="image" id="wantedItemImgPants" value="../assets/illustration_pants.jpg">
+                    <label class="form-check-label" for="wantedItemImgPants">
+                      <img src="../assets/illustration_pants.jpg" alt="illustration_pants" width="75%" style="margin:16px;">
+                    </label>
+                  </div>
+                  <div class="col-3 form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="image" id="wantedItemImgShirt" value="../assets/illustration_shirt.jpg">
+                    <label class="form-check-label" for="wantedItemImgShirt">
+                      <img src="../assets/illustration_shirt.jpg" alt="illustration_shirt" width="85%" style="margin:16px;">
+                    </label>
+                  </div>
                 </div>
-                <div class="col-3 form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="image" id="wantedItemImgShirt" value="../assets/illustration_shirt.jpg">
-                  <label class="form-check-label" for="wantedItemImgShirt">
-                    <img src="../assets/illustration_shirt.jpg" alt="illustration_shirt" width="85%" style="margin:16px;">
-                  </label>
-                </div>
-              </div>
 
                 <div class="row" style="margin-left:16px;">
-                <div class="col-3 form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="image" id="wantedItemImgSweater" value="../assets/sweater.png">
-                  <label class="form-check-label" for="wantedItemImgSweater">
-                    <img src="../assets/sweater.png" alt="illustration_sweater" width="75%" style="margin:16px;">
-                  </label>
-                </div>
-                <div class="col-3 form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="image" id="wantedItemImgOutwear" value="../assets/outwear.png">
-                  <label class="form-check-label" for="wantedItemImgOutwear">
-                    <img src="../assets/outwear.png" alt="illustration_outwear" width="80%" style="margin:16px;">
-                  </label>
-                </div>
-                <div class="col-3 form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="image" id="wantedItemImgDress" value="../assets/dress.png">
-                  <label class="form-check-label" for="wantedItemImgDress">
-                    <img src="../assets/dress.png" alt="illustration_dress" width="80%" style="margin:16px;">
-                  </label>
+                  <div class="col-3 form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="image" id="wantedItemImgSweater" value="../assets/sweater.png">
+                    <label class="form-check-label" for="wantedItemImgSweater">
+                      <img src="../assets/sweater.png" alt="illustration_sweater" width="75%" style="margin:16px;">
+                    </label>
+                  </div>
+                  <div class="col-3 form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="image" id="wantedItemImgOutwear" value="../assets/outwear.png">
+                    <label class="form-check-label" for="wantedItemImgOutwear">
+                      <img src="../assets/outwear.png" alt="illustration_outwear" width="80%" style="margin:16px;">
+                    </label>
+                  </div>
+                  <div class="col-3 form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="image" id="wantedItemImgDress" value="../assets/dress.png">
+                    <label class="form-check-label" for="wantedItemImgDress">
+                      <img src="../assets/dress.png" alt="illustration_dress" width="80%" style="margin:16px;">
+                    </label>
+                  </div>
                 </div>
               </div>
-            </div>
 
               <div class="form-group">
                 <label style="font-size:16px" for="item-name">
@@ -243,7 +243,6 @@
         let itemWantedName = this.refs.itemWantedName.value;
         let itemWantedStory = this.refs.itemWantedStory.value;
 
-
         let itemWantedColRef = database.collection("itemWantedCollection").doc();
         let id = itemWantedColRef.id;
         let itemsWantedByUsersColRef = database.collection("itemsByUsersCollection").doc(firebase.auth().currentUser.displayName).collection("itemsWantedcollection").doc(id);
@@ -288,15 +287,13 @@
     }
 
     .textarea {
-      padding-top: 0px;
+      padding-top: 0;
     }
 
     .card {
 
       background-color: #E1E6E0;
     }
-
-
   </style>
 
 </askfordonation>
