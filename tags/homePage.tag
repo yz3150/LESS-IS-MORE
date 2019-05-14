@@ -1,4 +1,5 @@
-<homepage>
+<homePage>
+  <!--  -->
   <div class="container justify-content-center">
     <div class="row col-12">
       <h3>Newest Posts</h3>
@@ -60,4 +61,4 @@
     }
   </style>
 
-</homepage>
+</homePage>

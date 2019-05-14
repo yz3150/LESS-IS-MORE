@@ -38,7 +38,7 @@
     </div>
 
     <div class="">
-      <homepage if={ user && mode==="homepage" }></homepage>
+      <homePage if={ user && mode==="homepage" }></homePage>
       <askfordonation if={ user && mode==="askForDonation" }></askfordonation>
       <donate if={ user && mode==="donate" }></donate>
       <myprofile if={ user && mode ==="myProfile" }></myprofile>
