@@ -12,37 +12,44 @@
                 <p>
                   <strong>Choose image</strong>
                 </p>
-                <div class="form-check form-check-inline">
+
+                <div class="row">
+
+                <div class="col-3 form-check form-check-inline">
                   <input class="form-check-input" type="radio" name="image" id="wantedItemImgPants" value="../assets/illustration_pants.jpg">
                   <label class="form-check-label" for="wantedItemImg">
-                    <img src="../assets/illustration_pants.jpg" alt="illustration_pants" width="27%">
+                    <img src="../assets/illustration_pants.jpg" alt="illustration_pants" width="75%">
                   </label>
                 </div>
-                <div class="form-check form-check-inline">
+                <div class="col-3 form-check form-check-inline">
                   <input class="form-check-input" type="radio" name="image" id="wantedItemImgShirt" value="../assets/illustration_shirt.jpg">
                   <label class="form-check-label" for="wantedItemImg">
-                    <img src="../assets/illustration_shirt.jpg" alt="illustration_shirt" width="50%">
-                  </label>
-                </div>
-                <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="image" id="wantedItemImgSweater" value="../assets/sweater.png">
-                  <label class="form-check-label" for="wantedItemImg">
-                    <img src="../assets/sweater.png" alt="illustration_sweater" width="50%">
-                  </label>
-                </div>
-                <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="image" id="wantedItemImgOutwear" value="../assets/outwear.png">
-                  <label class="form-check-label" for="wantedItemImg">
-                    <img src="../assets/outwear.png" alt="illustration_outwear" width="50%">
-                  </label>
-                </div>
-                <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="image" id="wantedItemImgDress" value="../assets/dress.png">
-                  <label class="form-check-label" for="wantedItemImg">
-                    <img src="../assets/dress.png" alt="illustration_dress" width="50%">
+                    <img src="../assets/illustration_shirt.jpg" alt="illustration_shirt" width="80%">
                   </label>
                 </div>
               </div>
+
+                <div class="row">
+                <div class="col-3 form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="image" id="wantedItemImgSweater" value="../assets/sweater.png">
+                  <label class="form-check-label" for="wantedItemImg">
+                    <img src="../assets/sweater.png" alt="illustration_sweater" width="75%">
+                  </label>
+                </div>
+                <div class="col-3 form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="image" id="wantedItemImgOutwear" value="../assets/outwear.png">
+                  <label class="form-check-label" for="wantedItemImg">
+                    <img src="../assets/outwear.png" alt="illustration_outwear" width="80%">
+                  </label>
+                </div>
+                <div class="col-3 form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="image" id="wantedItemImgDress" value="../assets/dress.png">
+                  <label class="form-check-label" for="wantedItemImg">
+                    <img src="../assets/dress.png" alt="illustration_dress" width="80%">
+                  </label>
+                </div>
+              </div>
+            </div>
 
               <div class="form-group">
                 <label style="font-size:16px" for="item-name">
@@ -282,8 +289,7 @@
     }
 
     .textarea {
-
-      padding-top: 105px;
+      padding-top: 0px;
     }
 
     .card {
