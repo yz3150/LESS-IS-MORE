@@ -3,7 +3,7 @@
     <div class="row">
       <div class="col">
         <h1 class="headline">
-          <a href="#"><img src="yz3150.github.io/LESS-IS-MORE-2/assets/logo.png" alt="login_img" width="23%" onclick={ toHomepage }></a>
+          <a href="#"><img src="yz3150.github.io/LESS-IS-MORE/assets/logo.png" alt="login_img" width="23%" onclick={ toHomepage }></a>
 
           <span class="float-right">
             <div class="row">
@@ -33,7 +33,7 @@
           </span>
         </h1>
         <hr class="hr">
-        <img src="../assets/Log-in-new.jpg" alt="login_img" hide={ user } width="100%">
+        <img src="gs://lessismore-22476.appspot.com/media/Log-in-new.jpg" alt="login_img" hide={ user } width="100%">
       </div>
     </div>
 
