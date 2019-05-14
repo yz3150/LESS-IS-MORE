@@ -66,11 +66,13 @@
       text-align: center;
       top: 20px;
       bottom: 60px;
+      padding-left: 30px;
+      padding-right: 30px;
     }
 
     .story-properties{
-      position: relative;
-      top: 10px;
+      position:inherit;
+      padding: 30px;
     }
 
     hr{
